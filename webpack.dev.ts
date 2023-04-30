@@ -1,9 +1,10 @@
 import * as path from 'path';
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { sentryWebpackPlugin } = require('@sentry/webpack-plugin');
 const mode = process.env.NODE_ENV || 'production';
 
-const devServerConfig = {
+const config = {
   devServer: {
     historyApiFallback: true,
     host: 'localhost',
@@ -16,7 +17,7 @@ const devServerConfig = {
   output: {
     chunkFilename: './scripts/[name].[contenthash:8].chunk.js',
     clean: true,
-    filename:  './scripts/[name].[contenthash:8].js',
+    filename: './scripts/[name].[contenthash:8].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
   },
@@ -51,4 +52,16 @@ const devServerConfig = {
   },
 };
 
-export default devServerConfig;
+if (process.env.SENTRY_RELEASE) {
+  config.plugins.push(
+    sentryWebpackPlugin({
+      include: '.',
+      ignore: ['node_modules', 'webpack.dev.ts'],
+      org: process.env.SENTRY_ORG,
+      project: process.env.SENTRY_PROJECT,
+      authToken: process.env.SENTRY_AUTH_TOKEN,
+    }),
+  );
+}
+
+export default config;
