@@ -1,0 +1,10 @@
+node_modules/
+dist/
+coverage/
+src/shared/assets/
+**/*.scss
+**/*.svg
+**/*.png
+**/*.woff
+**/*.woff2
+!.storybook
