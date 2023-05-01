@@ -10,14 +10,14 @@ const config = {
     host: 'localhost',
     port: 9000,
   },
-  devtool: mode === 'production' ? 'hidden-source-map' : 'eval-cheap-module-source-map',
+  devtool: mode === 'production' ? 'nosources-source-map' : 'eval-source-map',
   entry: {
     index: './src/index.tsx',
   },
   output: {
-    chunkFilename: './scripts/[name].[contenthash:8].chunk.js',
+    chunkFilename: './[name].[contenthash:8].chunk.js',
     clean: true,
-    filename: './scripts/[name].[contenthash:8].js',
+    filename: './[name].[contenthash:8].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
   },
@@ -55,7 +55,7 @@ const config = {
 if (process.env.SENTRY_RELEASE) {
   config.plugins.push(
     sentryWebpackPlugin({
-      include: '.',
+      include: './dist',
       ignore: ['node_modules', 'webpack.dev.ts'],
       org: process.env.SENTRY_ORG,
       project: process.env.SENTRY_PROJECT,

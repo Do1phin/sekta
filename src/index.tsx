@@ -1,8 +1,9 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import * as Sentry from '@sentry/react';
-
+import { I18nextProvider } from 'react-i18next';
 import { App } from './app/components';
+import i18n from '../i18n';
 
 declare global {
   interface Window {
@@ -22,6 +23,8 @@ if (window.SENTRY_RELEASE) {
 const root = createRoot(document.getElementById('root'));
 root.render(
   <Sentry.ErrorBoundary fallback='error'>
-    <App />
+    <I18nextProvider i18n={i18n}>
+      <App />
+    </I18nextProvider>
   </Sentry.ErrorBoundary>,
 );

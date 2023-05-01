@@ -38,9 +38,12 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.1",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-http-backend": "^2.2.0",
     "prettier": "2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.2",
     "sass": "^1.62.1",
     "sass-loader": "^13.2.2",
     "style-loader": "^3.3.2",
@@ -51,6 +54,7 @@
     "webpack-dev-server": "^4.13.3"
   },
   "dependencies": {
-    "@sentry/react": "^7.50.0"
+    "@sentry/react": "^7.50.0",
+    "i18next": "^22.4.15"
   }
 }
