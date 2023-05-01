@@ -8,9 +8,12 @@
     "build": "webpack --mode production --config webpack.dev.ts",
     "build:storybook": "storybook build",
     "dev:serve": "webpack serve --mode development --config webpack.dev.ts",
+    "prettier:check": "prettier src/**/*.ts --check ",
+    "prettier:fix": "prettier src/**/*.ts --write --ignore-unknown",
     "lint:check": "eslint --ext .ts,.tsx src/**/",
     "lint:fix": "eslint --ext .ts,.tsx src/**/ --fix",
-    "storybook": "storybook dev -p 6006"
+    "storybook": "storybook dev -p 6006",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -58,9 +61,11 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.1",
+    "husky": "^8.0.0",
     "i18next": "^22.4.15",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.2.0",
+    "lint-staged": "^13.2.2",
     "prettier": "2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -71,9 +76,17 @@
     "storybook-addon-designs": "^7.0.0-beta.2",
     "style-loader": "^3.3.2",
     "ts-node": "^10.9.1",
-    "typescript": "^5.0.4",
+    "typescript": "^5.1.0-dev.20230501",
     "webpack": "^5.81.0",
     "webpack-cli": "^5.0.2",
     "webpack-dev-server": "^4.13.3"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "npm run lint:fix"
+    ],
+    "*.{json,js,ts,jsx,tsx,html}": [
+      "prettier --write"
+    ]
   }
 }
