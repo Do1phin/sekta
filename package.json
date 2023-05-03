@@ -5,9 +5,9 @@
   "main": "./src/index.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production --config webpack.dev.ts",
+    "build": "set NODE_ENV=production&& webpack --mode production --progress  --config webpack.prod.ts",
     "build:storybook": "storybook build",
-    "dev:serve": "webpack serve --mode development --config webpack.dev.ts",
+    "dev:serve": "set NODE_ENV=development&& webpack serve --mode development --progress --config webpack.dev.ts",
     "prettier:check": "prettier src/**/*.ts --check ",
     "prettier:fix": "prettier src/**/*.ts --write --ignore-unknown",
     "lint:check": "eslint --ext .ts,.tsx src/**/",
@@ -66,6 +66,7 @@
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.2.0",
     "lint-staged": "^13.2.2",
+    "mini-css-extract-plugin": "^2.7.5",
     "prettier": "2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -75,11 +76,11 @@
     "storybook": "^7.0.7",
     "storybook-addon-designs": "^7.0.0-beta.2",
     "style-loader": "^3.3.2",
-    "ts-node": "^10.9.1",
     "typescript": "^5.1.0-dev.20230501",
     "webpack": "^5.81.0",
     "webpack-cli": "^5.0.2",
-    "webpack-dev-server": "^4.13.3"
+    "webpack-dev-server": "^4.13.3",
+    "webpack-merge": "^5.8.0"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [

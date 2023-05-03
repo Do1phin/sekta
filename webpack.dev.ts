@@ -1,34 +1,18 @@
-import * as path from 'path';
+import type { Configuration } from 'webpack';
+import type { Configuration as DevConfiguration } from 'webpack-dev-server';
+import merge from 'webpack-merge';
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { sentryWebpackPlugin } = require('@sentry/webpack-plugin');
-const mode = process.env.NODE_ENV || 'production';
+import { commonConfig } from './webpack.common.ts';
 
-const config = {
+const mode = process.env.NODE_ENV || 'development';
+
+const devConfig = merge<Pick<Configuration, DevConfiguration>>(commonConfig, {
   devServer: {
     historyApiFallback: true,
     host: 'localhost',
     port: 9000,
   },
-  devtool: mode === 'production' ? 'nosources-source-map' : 'eval-source-map',
-  entry: {
-    index: './src/index.tsx',
-  },
-  output: {
-    chunkFilename: './[name].[contenthash:8].chunk.js',
-    clean: true,
-    filename: './[name].[contenthash:8].js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'src/app/index.html',
-    }),
-  ],
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx'],
-  },
+  devtool: mode === 'development' ? 'eval-source-map' : 'nosources-source-map',
   mode,
   module: {
     rules: [
@@ -39,29 +23,13 @@ const config = {
         test: /\.s[ac]ss$/i,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
-      {
-        exclude: [/node_modules/],
-        test: /\.(ts|tsx|js|jsx)$/i,
-        loader: 'babel-loader',
-      },
-      {
-        test: /\.html/i,
-        loader: 'html-loader',
-      },
     ],
   },
-};
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
+});
 
-if (process.env.SENTRY_RELEASE) {
-  config.plugins.push(
-    sentryWebpackPlugin({
-      include: './dist',
-      ignore: ['node_modules', 'webpack.dev.ts'],
-      org: process.env.SENTRY_ORG,
-      project: process.env.SENTRY_PROJECT,
-      authToken: process.env.SENTRY_AUTH_TOKEN,
-    }),
-  );
-}
-
-export default config;
+export default devConfig;
