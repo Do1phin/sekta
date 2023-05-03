@@ -1,4 +1,4 @@
-import * as HtmlWebpackPlugin from 'html-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import type { Configuration } from 'webpack';
 const mode = process.env.NODE_ENV || 'none';
