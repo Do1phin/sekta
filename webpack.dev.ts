@@ -1,3 +1,4 @@
+import path from 'path';
 import type { Configuration } from 'webpack';
 import type { Configuration as DevConfiguration } from 'webpack-dev-server';
 import merge from 'webpack-merge';
@@ -9,8 +10,13 @@ const mode = process.env.NODE_ENV || 'development';
 const devConfig = merge<Pick<Configuration, DevConfiguration>>(commonConfig, {
   devServer: {
     historyApiFallback: true,
-    host: 'localhost',
-    port: 9000,
+    host: '0.0.0.0',
+    hot: 'only',
+    port: 8080,
+    static: {
+      directory: path.join(__dirname, './'),
+      serveIndex: true,
+    },
   },
   devtool: mode === 'development' ? 'eval-source-map' : 'nosources-source-map',
   mode,
@@ -29,6 +35,10 @@ const devConfig = merge<Pick<Configuration, DevConfiguration>>(commonConfig, {
     splitChunks: {
       chunks: 'all',
     },
+  },
+  watchOptions: {
+    aggregateTimeout: 500,
+    poll: 1000,
   },
 });
 

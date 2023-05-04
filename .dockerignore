@@ -1,0 +1,9 @@
+.git
+.cache
+.husky
+.idea
+.env
+node_modules
+storybook-static
+*.map
+Dockerfile*
