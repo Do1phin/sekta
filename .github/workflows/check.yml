@@ -1,0 +1,32 @@
+name: 🔎 Check
+on:
+  push:
+    branches: [develop, master]
+  pull_request:
+    branches: [develop, master]
+jobs:
+  lint:
+    runs-on: ${{ matrix.os }}
+    continue-on-error: true
+    strategy:
+      matrix:
+        os: [ ubuntu-latest ]
+        node: [14, 16, 18, 19, 20]
+    steps:
+      - name: 📥 Git Actions Checkout
+        uses: actions/checkout@v3
+      - name: 🚀 Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: 🗑️ Cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: npm-feature-${{ hashFiles('**/package-lock.json') }}
+      - name: 🧩 Install dependencies
+        run: npm сi
+      - name: 🛠 Lint
+        run: npm run lint:check
+      - name: 🎀 Pretty
+        run: npm run prettier:check
