@@ -23,10 +23,17 @@ const commonConfig: Configuration = {
         loader: 'html-loader',
         test: /\.html/i,
       },
+      {
+        generator: {
+          filename: 'assets/fonts/[name][ext]',
+        },
+        test: /\.woff2?$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   output: {
-    assetModuleFilename: 'assets/images/[name][ext]',
+    assetModuleFilename: 'assets/icons/[name][ext]',
     chunkFilename: './[name].[contenthash:8].chunk.js',
     clean: true,
     filename: './[name].[contenthash:8].js',
