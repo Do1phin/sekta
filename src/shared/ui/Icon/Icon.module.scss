@@ -1,0 +1,59 @@
+@import 'src/shared/styles/colors';
+@import 'src/shared/styles/variables';
+
+.icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  & svg {
+    fill: $ui-base-color-black;
+    align-items: center;
+    display: flex;
+    height: 1rem;
+    justify-content: center;
+    width: 1rem;
+  }
+
+  // Size
+  &.small svg {
+    height: calc($ui-step * 3);
+    width: calc($ui-step * 3);
+  }
+  &.normal svg {
+    height: calc($ui-step * 3.5);
+    width: calc($ui-step * 3.5);
+  }
+  &.large svg {
+    height: calc($ui-step * 4);
+    width: calc($ui-step * 4);
+  }
+  &.extra-large svg {
+    height: calc($ui-step * 5);
+    width: calc($ui-step * 5);
+  }
+  &.mega svg {
+    height: calc($ui-step * 6);
+    width: calc($ui-step * 6);
+  }
+
+  // Color
+  &.default svg {
+    fill: $ui-color-gray-main;
+  }
+  &.primary> svg {
+    fill: $ui-color-primary-main;
+  }
+  &.info svg {
+    fill: $ui-color-info-main;
+  }
+  &.warning svg {
+    fill: $ui-color-warning-main;
+  }
+  &.danger svg {
+    fill: $ui-color-danger-main;
+  }
+  &.success svg {
+    fill: $ui-color-success-main;
+  }
+}
