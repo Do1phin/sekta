@@ -1,0 +1,140 @@
+@import 'src/shared/styles/colors';
+@import 'src/shared/styles/variables';
+
+.button {
+  align-items: center;
+  border: {
+    color: transparent;
+    radius: $ui-radius;
+  }
+  color: $ui-base-color-white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  font: {
+    family: 'Primary Medium', sans-serif;
+    size: $ui-fontsize-base;
+  }
+  gap: $ui-step;
+  justify-content: start;
+  padding: calc($ui-step * 2) calc($ui-step * 4);
+  user-select: none;
+  vertical-align: middle;
+
+  & svg {
+    fill: $ui-base-color-white;
+    height: calc($ui-step * 4);
+    width: calc($ui-step * 4);
+  }
+
+  // Icon Position
+  &.right {
+    flex-direction: row-reverse;
+  }
+
+  // Content
+  &.icon {
+    padding: calc($ui-step * 1.5);
+    & svg {
+      height: calc($ui-step * 5);
+      width: calc($ui-step * 5);
+    }
+  }
+
+  // Button sizes
+  &.small {
+    font-size: $ui-fontsize-small;
+  }
+  &.large {
+    font-size: $ui-fontsize-large;
+  }
+
+  // States
+  &:disabled {
+    background-color: $ui-color-gray-200;
+    color: $ui-color-gray-500;
+    & svg {
+      fill: $ui-color-gray-main;
+    }
+  }
+
+  // Primary Variant
+  &.primary:not(:disabled) {
+    background-color: $ui-color-primary-main;
+    color: $ui-base-color-white;
+    & svg {
+      fill: $ui-base-color-white;
+    }
+
+    &:active {
+      background-color: $ui-color-primary-pressed;
+      color: $ui-base-color-white;
+    }
+    &:hover {
+      background-color: $ui-color-primary-hover;
+      color: $ui-base-color-white;
+    }
+    &:focus {
+      border: $ui-border-focus solid $ui-color-primary-focus;
+      color: $ui-base-color-white;
+    }
+  }
+
+  // Secondary Variant
+  &.secondary:not(:disabled) {
+    background-color: $ui-color-primary-secondary;
+    color: $ui-color-primary-main;
+    & svg {
+      fill: $ui-color-primary-main;
+    }
+
+    &:active {
+      color: $ui-color-primary-pressed;
+      & svg {
+        fill: $ui-color-primary-pressed;
+      }
+    }
+    &:hover {
+      color: $ui-color-primary-hover;
+      & svg {
+        fill: $ui-color-primary-hover;
+      }
+    }
+    &:focus {
+      border: $ui-border-focus solid $ui-color-primary-focus;
+      color: $ui-color-primary-main;
+      & svg {
+        fill: $ui-color-primary-main;
+      }
+    }
+  }
+
+  // Tertiary Variant
+  &.tertiary:not(:disabled) {
+    background-color: transparent;
+    color: $ui-color-primary-main;
+    & svg {
+      fill: $ui-color-primary-main;
+    }
+
+    &:active {
+      color: $ui-color-primary-pressed;
+      & svg {
+        fill: $ui-color-primary-pressed;
+      }
+    }
+    &:hover {
+      color: $ui-color-primary-hover;
+      & svg {
+        fill: $ui-color-primary-hover;
+      }
+    }
+    &:focus {
+      border: $ui-border-focus solid $ui-color-primary-focus;
+      color: $ui-color-primary-main;
+      & svg {
+        fill: $ui-color-primary-main;
+      }
+    }
+  }
+}
