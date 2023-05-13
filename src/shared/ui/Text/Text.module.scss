@@ -1,0 +1,29 @@
+@import 'src/shared/styles/colors';
+@import 'src/shared/styles/variables';
+
+.text {
+  font-family: 'Primary Regular', serif;
+  font-size: $ui-fontsize-base;
+
+  &.small {
+    font-size: $ui-fontsize-small;
+  }
+  &.large {
+    font-size: $ui-fontsize-large;
+  }
+  &.primary {
+    color: $ui-color-primary-main;
+  }
+  &.success {
+    color: $ui-color-success-main;
+  }
+  &.info {
+    color: $ui-color-info-main;
+  }
+  &.danger {
+    color: $ui-color-danger-main;
+  }
+  &.warning {
+    color: $ui-color-warning-main;
+  }
+}
