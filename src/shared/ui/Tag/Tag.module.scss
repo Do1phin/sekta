@@ -1,0 +1,77 @@
+@import 'src/shared/styles/variables';
+@import 'src/shared/styles/colors';
+
+.tag {
+  align-items: center;
+  border: $ui-border-base solid $ui-color-gray-500;
+  border-radius: $ui-radius-100;
+  color: $ui-color-gray-main;
+  display: inline-flex;
+  flex-direction: row;
+  gap: $ui-padding-4;
+  padding: calc($ui-step / 2) calc($ui-step * 2);
+  width: fit-content;
+  background: {
+    color: $ui-color-gray-200;
+  }
+
+  // Icon position
+  &.left {
+    flex-direction: row;
+  }
+  &.right {
+    flex-direction: row-reverse;
+  }
+
+  // States
+  &.primary {
+    border: $ui-border-base solid $ui-color-primary-border;
+    color: $ui-color-primary-main;
+    background: {
+      color: $ui-color-primary-secondary;
+    }
+  }
+  &.primary svg {
+    fill: $ui-color-primary-main;
+  }
+  &.success {
+    border: $ui-border-base solid $ui-color-success-border;
+    color: $ui-color-success-main;
+    background: {
+      color: $ui-color-success-secondary;
+    }
+    & svg {
+      fill: $ui-color-success-main;
+    }
+  }
+  &.info {
+    border: $ui-border-base solid $ui-color-info-border;
+    color: $ui-color-info-main;
+    background: {
+      color: $ui-color-info-secondary;
+    }
+    & svg {
+      fill: $ui-color-info-main;
+    }
+  }
+  &.warning {
+    border: $ui-border-base solid $ui-color-warning-border;
+    color: $ui-color-warning;
+    background: {
+      color: $ui-color-warning-secondary;
+    }
+    & svg {
+      fill: $ui-color-warning-main;
+    }
+  }
+  &.danger {
+    border: $ui-border-base solid $ui-color-danger-border;
+    color: $ui-color-danger-main;
+    background: {
+      color: $ui-color-danger-secondary;
+    }
+    & svg {
+      fill: $ui-color-danger-main;
+    }
+  }
+}
