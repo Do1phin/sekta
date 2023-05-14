@@ -1,0 +1,56 @@
+@import 'src/shared/styles/colors';
+@import 'src/shared/styles/variables';
+
+.custom-checkbox {
+  margin-bottom: 0.2em;
+
+  & > input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  & > span {
+    align-items: center;
+    display: inline-flex;
+    user-select: none;
+  }
+  & > span::before {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    border: $ui-border-base solid $ui-color-gray-500;
+    border-radius: calc($ui-radius);
+    content: '';
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: calc($ui-step * 5);
+    margin-right: calc($ui-step * 2);
+    width: calc($ui-step * 5);
+  }
+
+  // Styles
+  & > input:not(:disabled):not(:checked) + span:hover::before {
+    border-color: $ui-color-primary-hover;
+  }
+  & > input:not(:disabled):active + span::before {
+    background-color: $ui-color-primary-pressed;
+  }
+  & > input:focus + span::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  & > input:focus:not(:checked) + span::before {
+    border-color: $ui-color-primary-focus;
+  }
+  & > input:disabled + span::before {
+    background-color: $ui-color-gray-500;
+  }
+  & > input:checked + span::before {
+    background: url('./../../icons/white-check.svg') $ui-color-primary-main no-repeat center center;
+    background-size: 80%;
+  }
+}
+
+
+
+
