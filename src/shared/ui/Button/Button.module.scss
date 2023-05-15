@@ -3,24 +3,22 @@
 
 .button {
   align-items: center;
-  border: {
-    color: transparent;
-    radius: $ui-radius;
-  }
   color: $ui-base-color-white;
   cursor: pointer;
   display: flex;
   flex-direction: row;
-  font: {
-    family: 'Primary Medium', sans-serif;
-    size: $ui-fontsize-base;
-  }
   gap: $ui-step;
   justify-content: start;
   padding: calc($ui-step * 2) calc($ui-step * 4);
   user-select: none;
   vertical-align: middle;
-
+  font: {
+    family: 'Primary Medium', sans-serif;
+  }
+  border: {
+    radius: $ui-radius;
+    color: transparent;
+  }
   & svg {
     fill: $ui-base-color-white;
     height: calc($ui-step * 4);
@@ -33,20 +31,48 @@
   }
 
   // Content
+  &.text {
+    &.small {
+      font-size: $ui-fontsize-small;
+    }
+    &.normal {
+      font-size: $ui-fontsize-base;
+    }
+    &.large {
+      font-size: $ui-fontsize-large;
+    }
+  }
   &.icon {
     padding: calc($ui-step * 1.5);
-    & svg {
+
+    &.small svg {
+      height: calc($ui-step * 3.5);
+      width: calc($ui-step * 3.5);
+    }
+    &.normal svg {
+      height: calc($ui-step * 4);
+      width: calc($ui-step * 4);
+    }
+    &.large svg {
       height: calc($ui-step * 5);
       width: calc($ui-step * 5);
     }
   }
+  &.icon-only {
+    padding: calc($ui-step * 1.5);
 
-  // Button sizes
-  &.small {
-    font-size: $ui-fontsize-small;
-  }
-  &.large {
-    font-size: $ui-fontsize-large;
+    &.small svg {
+      height: calc($ui-step * 3.5);
+      width: calc($ui-step * 3.5);
+    }
+    &.normal svg {
+      height: calc($ui-step * 4);
+      width: calc($ui-step * 4);
+    }
+    &.large svg {
+      height: calc($ui-step * 5);
+      width: calc($ui-step * 5);
+    }
   }
 
   // States
@@ -58,7 +84,7 @@
     }
   }
 
-  // Primary Variant
+  // Types
   &.primary:not(:disabled) {
     background-color: $ui-color-primary-main;
     color: $ui-base-color-white;
@@ -79,8 +105,6 @@
       color: $ui-base-color-white;
     }
   }
-
-  // Secondary Variant
   &.secondary:not(:disabled) {
     background-color: $ui-color-primary-secondary;
     color: $ui-color-primary-main;
@@ -108,8 +132,6 @@
       }
     }
   }
-
-  // Tertiary Variant
   &.tertiary:not(:disabled) {
     background-color: transparent;
     color: $ui-color-primary-main;
@@ -135,6 +157,234 @@
       & svg {
         fill: $ui-color-primary-main;
       }
+    }
+  }
+
+  // Style (success)
+  &.success:not(:disabled) {
+    background-color: $ui-color-success-main;
+    color: $ui-base-color-white;
+    & svg {
+      fill: $ui-base-color-white;
+    }
+    &:active {
+      background-color: $ui-color-success-pressed;
+      color: $ui-base-color-white;
+    }
+    &:hover {
+      background-color: $ui-color-success-hover;
+      color: $ui-base-color-white;
+    }
+    &:focus {
+      border: $ui-border-focus solid $ui-color-success-focus;
+      color: $ui-base-color-white;
+    }
+  }
+  &.secondary.success:not(:disabled) {
+    background-color: $ui-color-success-secondary;
+    color: $ui-color-success-main;
+    & svg {
+      fill: $ui-color-success-main;
+    }
+    &:active {
+      background-color: $ui-color-success-secondary;
+      color: $ui-color-success-pressed;
+    }
+    &:hover {
+      background-color: $ui-color-success-secondary;
+      color: $ui-color-success-hover;
+    }
+    &:focus {
+      border: $ui-border-focus solid $ui-color-success-focus;
+      color: $ui-color-success-focus;
+    }
+  }
+  &.tertiary.success:not(:disabled) {
+    background-color: transparent;
+    color: $ui-color-success-main;
+    & svg {
+      fill: $ui-color-success-main;
+    }
+    &:active {
+      color: $ui-color-success-pressed;
+    }
+    &:hover {
+      color: $ui-color-success-hover;
+    }
+    &:focus {
+      border: $ui-border-focus solid $ui-color-success-focus;
+      color: $ui-color-success-focus;
+    }
+  }
+
+  // Style (danger)
+  &.danger:not(:disabled) {
+    background-color: $ui-color-danger-main;
+    color: $ui-base-color-white;
+    & svg {
+      fill: $ui-base-color-white;
+    }
+    &:active {
+      background-color: $ui-color-danger-pressed;
+      color: $ui-base-color-white;
+    }
+    &:hover {
+      background-color: $ui-color-danger-hover;
+      color: $ui-base-color-white;
+    }
+    &:focus {
+      border: $ui-border-focus solid $ui-color-danger-focus;
+      color: $ui-base-color-white;
+    }
+  }
+  &.secondary.danger:not(:disabled) {
+    background-color: $ui-color-danger-secondary;
+    color: $ui-color-danger-main;
+    & svg {
+      fill: $ui-color-danger-main;
+    }
+    &:active {
+      background-color: $ui-color-danger-secondary;
+      color: $ui-color-danger-pressed;
+    }
+    &:hover {
+      background-color: $ui-color-danger-secondary;
+      color: $ui-color-danger-hover;
+    }
+    &:focus {
+      border: $ui-border-focus solid $ui-color-danger-focus;
+      color: $ui-color-danger-focus;
+    }
+  }
+  &.tertiary.danger:not(:disabled) {
+    background-color: transparent;
+    color: $ui-color-danger-main;
+    & svg {
+      fill: $ui-color-danger-main;
+    }
+    &:active {
+      color: $ui-color-danger-pressed;
+    }
+    &:hover {
+      color: $ui-color-danger-hover;
+    }
+    &:focus {
+      border: $ui-border-focus solid $ui-color-danger-focus;
+      color: $ui-color-danger-focus;
+    }
+  }
+
+  // Style (info)
+  &.info:not(:disabled) {
+    background-color: $ui-color-info-main;
+    color: $ui-base-color-white;
+    & svg {
+      fill: $ui-base-color-white;
+    }
+    &:active {
+      background-color: $ui-color-info-pressed;
+      color: $ui-base-color-white;
+    }
+    &:hover {
+      background-color: $ui-color-info-hover;
+      color: $ui-base-color-white;
+    }
+    &:focus {
+      border: $ui-border-focus solid $ui-color-info-focus;
+      color: $ui-base-color-white;
+    }
+  }
+  &.secondary.info:not(:disabled) {
+    background-color: $ui-color-info-secondary;
+    color: $ui-color-info-main;
+    & svg {
+      fill: $ui-color-info-main;
+    }
+    &:active {
+      background-color: $ui-color-info-secondary;
+      color: $ui-color-info-pressed;
+    }
+    &:hover {
+      background-color: $ui-color-info-secondary;
+      color: $ui-color-info-hover;
+    }
+    &:focus {
+      border: $ui-border-focus solid $ui-color-info-focus;
+      color: $ui-color-info-focus;
+    }
+  }
+  &.tertiary.info:not(:disabled) {
+    background-color: transparent;
+    color: $ui-color-info-main;
+    & svg {
+      fill: $ui-color-info-main;
+    }
+    &:active {
+      color: $ui-color-info-pressed;
+    }
+    &:hover {
+      color: $ui-color-info-hover;
+    }
+    &:focus {
+      border: $ui-border-focus solid $ui-color-info-focus;
+      color: $ui-color-info-focus;
+    }
+  }
+
+  // Style (warning)
+  &.warning:not(:disabled) {
+    background-color: $ui-color-warning-main;
+    color: $ui-base-color-white;
+    & svg {
+      fill: $ui-base-color-white;
+    }
+    &:active {
+      background-color: $ui-color-warning-pressed;
+      color: $ui-base-color-white;
+    }
+    &:hover {
+      background-color: $ui-color-warning-hover;
+      color: $ui-base-color-white;
+    }
+    &:focus {
+      border: $ui-border-focus solid $ui-color-warning-focus;
+      color: $ui-base-color-white;
+    }
+  }
+  &.secondary.warning:not(:disabled) {
+    background-color: $ui-color-warning-secondary;
+    color: $ui-color-warning-main;
+    & svg {
+      fill: $ui-color-warning-main;
+    }
+    &:active {
+      background-color: $ui-color-warning-secondary;
+      color: $ui-color-warning-pressed;
+    }
+    &:hover {
+      background-color: $ui-color-warning-secondary;
+      color: $ui-color-warning-hover;
+    }
+    &:focus {
+      border: $ui-border-focus solid $ui-color-warning-focus;
+      color: $ui-color-warning-focus;
+    }
+  }
+  &.tertiary.warning:not(:disabled) {
+    background-color: transparent;
+    color: $ui-color-warning-main;
+    & svg {
+      fill: $ui-color-warning-main;
+    }
+    &:active {
+      color: $ui-color-warning-pressed;
+    }
+    &:hover {
+      color: $ui-color-warning-hover;
+    }
+    &:focus {
+      border: $ui-border-focus solid $ui-color-warning-focus;
+      color: $ui-color-warning-focus;
     }
   }
 }
