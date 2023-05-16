@@ -1,4 +1,4 @@
-import type { IconPositionTypes, SizeTypes, TagStyleTypes } from '../../types/componentTypes';
+import type { ExtendStyleTypes, IconPositionTypes, SizeTypes } from '../../types/componentTypes';
 import cx from 'classnames';
 import React, { FC } from 'react';
 
@@ -10,7 +10,7 @@ interface ITagProps {
   icon?: string;
   iconPosition?: IconPositionTypes;
   size?: SizeTypes;
-  style?: TagStyleTypes;
+  style?: ExtendStyleTypes;
   text: string;
 }
 
