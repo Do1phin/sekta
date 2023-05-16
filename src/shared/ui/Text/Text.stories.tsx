@@ -12,59 +12,37 @@ export default meta;
 type Story = StoryObj<typeof Text>;
 
 export const Default: Story = {
-  render: (args) => (
-    <Text state={args.state} fontSize={args.fontSize}>
-      Default Text
-    </Text>
-  ),
+  render: () => <Text>Default Text</Text>,
 };
 
 export const TextSizes: Story = {
   args: {
-    state: 'default',
+    style: 'default',
   },
-  render: (args) => (
+  render: () => (
     <>
       <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
-        <Text fontSize={'12px'} state={args.state}>
-          Default Text
-        </Text>
-        <Text fontSize={'14px'} state={args.state}>
-          Primary Text
-        </Text>
-        <Text fontSize={'16px'} state={args.state}>
-          Success Text
-        </Text>
+        <Text fontSize={'12px'}>Default Text</Text>
+        <Text fontSize={'14px'}>Primary Text</Text>
+        <Text fontSize={'16px'}>Success Text</Text>
       </div>
     </>
   ),
 };
 
-export const TextStates: Story = {
+export const TextStyles: Story = {
   args: {
     fontSize: '14px',
   },
-  render: (args) => (
+  render: () => (
     <>
       <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
-        <Text fontSize={args.fontSize} state={'default'}>
-          Default Text
-        </Text>
-        <Text fontSize={args.fontSize} state={'primary'}>
-          Primary Text
-        </Text>
-        <Text fontSize={args.fontSize} state={'success'}>
-          Success Text
-        </Text>
-        <Text fontSize={args.fontSize} state={'info'}>
-          Info Text
-        </Text>
-        <Text fontSize={args.fontSize} state={'danger'}>
-          Danger Text
-        </Text>
-        <Text fontSize={args.fontSize} state={'warning'}>
-          Warning Text
-        </Text>
+        <Text style={'default'}>Default Text</Text>
+        <Text style={'primary'}>Primary Text</Text>
+        <Text style={'success'}>Success Text</Text>
+        <Text style={'info'}>Info Text</Text>
+        <Text style={'danger'}>Danger Text</Text>
+        <Text style={'warning'}>Warning Text</Text>
       </div>
     </>
   ),
