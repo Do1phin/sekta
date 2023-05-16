@@ -1,0 +1,119 @@
+@import 'src/shared/styles/colors';
+@import 'src/shared/styles/variables';
+
+.input {
+  background-color: $ui-base-color-white;
+  border-radius: $ui-radius;
+  display: flex;
+  flex-direction: column;
+  gap: $ui-step;
+
+  &__label {
+    color: $ui-base-color-black;
+    font-family: 'Primary Regular', sans-serif;
+    font-size: $ui-fontsize-large;
+  }
+
+  &__input {
+    align-content: start;
+    align-items: start;
+    color: $ui-color-gray-700;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    & > input {
+      border: $ui-border-base solid $ui-color-gray-400;
+      border-radius: $ui-step;
+      color: $ui-color-gray-700;
+      font-family: 'Primary Regular', sans-serif;
+      font-size: $ui-fontsize-base;
+      padding: calc($ui-step * 1.5) calc($ui-step * 8) calc($ui-step * 1.5) calc($ui-step * 3);
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    content: '';
+    height: calc($ui-step * 4);
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc($ui-step * 4);
+
+    & svg {
+      fill: $ui-color-gray-700;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__helper {
+    color: $ui-color-gray-700;
+    font-family: 'Primary Regular', sans-serif;
+    font-size: $ui-fontsize-small;
+
+    &:disabled {
+      color: orange;
+    }
+  }
+
+  // Status
+  &.info:not(:disabled) {
+    .input__input input {
+      border: $ui-border-base solid $ui-color-info-main;
+    }
+
+    .input__icon svg {
+      fill: $ui-color-info-main;
+    }
+
+    .input__helper {
+      color: $ui-color-info-main;
+    }
+  }
+
+  &.success:not(:disabled) {
+    .input__input input {
+      border: $ui-border-base solid $ui-color-success-main;
+    }
+
+    .input__icon svg {
+      fill: $ui-color-success-main;
+    }
+
+    .input__helper {
+      color: $ui-color-success-main;
+    }
+  }
+
+  &.danger:not(:disabled) {
+    .input__input input {
+      border: $ui-border-base solid $ui-color-danger-main;
+    }
+
+    .input__icon svg {
+      fill: $ui-color-danger-main;
+    }
+
+    .input__helper {
+      color: $ui-color-danger-main;
+    }
+  }
+
+  &.warning:not(:disabled) {
+    .input__input input {
+      border: $ui-border-base solid $ui-color-warning-main;
+    }
+
+    .input__icon svg {
+      fill: $ui-color-warning-main;
+    }
+
+    .input__helper {
+      color: $ui-color-warning-main;
+    }
+  }
+}
