@@ -1,0 +1,43 @@
+@font-face {
+  font-feature-settings: 'smps' on;
+  font-family: 'Primary';
+  font-style: normal;
+  font-weight: normal;
+  src: local('DM Sans Regular'), local('DMSans-Regular'),
+    url('../../shared/fonts/DmSans/DMSans-Regular.woff2') format('woff2'),
+    url('../../shared/fonts/DmSans/DMSans-Regular.woff') format('woff');
+  unicode-range: U+00-FF, U+980-9FF;
+}
+
+@font-face {
+  font-feature-settings: 'smps' on;
+  font-family: 'Primary Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: local('DM Sans Medium'), local('DMSans-Medium'),
+    url('../../shared/fonts/DmSans/DMSans-Medium.woff2') format('woff2'),
+    url('../../shared/fonts/DmSans/DMSans-Medium.woff') format('woff');
+  unicode-range: U+00-FF, U+980-9FF;
+}
+
+@font-face {
+  font-feature-settings: 'smps' on;
+  font-family: 'Primary Italic';
+  font-style: italic;
+  font-weight: normal;
+  src: local('DM Sans Italic'), local('DMSans-Italic'),
+    url('../../shared/fonts/DmSans/DMSans-Italic.woff2') format('woff2'),
+    url('../../shared/fonts/DmSans/DMSans-Italic.woff') format('woff');
+  unicode-range: U+00-FF, U+980-9FF;
+}
+
+@font-face {
+  font-feature-settings: 'smps' on;
+  font-family: 'Primary Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: local('DM Sans Bold'), local('DMSans-Bold'),
+    url('../../shared/fonts/DmSans/DMSans-Bold.woff2') format('woff2'),
+    url('../../shared/fonts/DmSans/DMSans-Bold.woff') format('woff');
+  unicode-range: U+00-FF, U+980-9FF;
+}

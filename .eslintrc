@@ -15,7 +15,8 @@
     "plugin:react-hooks/recommended",
     "plugin:promise/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:json/recommended"
+    "plugin:json/recommended",
+    "plugin:typescript-sort-keys/recommended"
   ],
   "plugins": ["react", "prettier", "@typescript-eslint", "json"],
   "rules": {
