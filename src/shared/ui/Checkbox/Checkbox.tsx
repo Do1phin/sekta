@@ -12,7 +12,7 @@ interface ICheckbox {
 }
 
 const Checkbox: FC<ICheckbox> = (props) => {
-  const { checked, disabled, label, onChange, value } = props;
+  const { checked = false, disabled = false, label, onChange, value } = props;
 
   return (
     <label className={cx(css['custom-checkbox'], { checked: checked, disabled: disabled })}>
