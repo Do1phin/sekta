@@ -1,0 +1,124 @@
+@import 'src/shared/styles/variables';
+@import 'src/shared/styles/colors';
+
+.tag {
+  align-items: center;
+  border: $ui-border-base solid $ui-color-gray-500;
+  border-radius: $ui-radius-100;
+  color: $ui-color-gray-main;
+  display: inline-flex;
+  flex-direction: row;
+  gap: $ui-padding-4;
+  padding: calc($ui-step / 2) calc($ui-step * 2);
+  width: fit-content;
+  background: {
+    color: $ui-color-gray-200;
+  }
+
+  // Content
+  &__icon {
+    display: flex;
+    justify-content: center;
+
+    & svg {
+      height: 100%;
+      width: 100%;
+    }
+
+    &.small svg {
+      height: calc($ui-step * 3.5);
+      width: calc($ui-step * 3.5);
+    }
+    &.normal svg {
+      height: calc($ui-step * 4);
+      width: calc($ui-step * 4);
+    }
+    &.large svg {
+      height: calc($ui-step * 5);
+      width: calc($ui-step * 5);
+    }
+  }
+  &__text {
+    align-items: center;
+
+    &.small {
+      font-size: calc($ui-fontsize-small);
+    }
+    &.normal {
+      font-size: calc($ui-fontsize-base);
+    }
+    &.large {
+      font-size: calc($ui-fontsize-large);
+    }
+  }
+
+  // Icon position
+  &.left {
+    flex-direction: row;
+  }
+  &.right {
+    flex-direction: row-reverse;
+  }
+
+  // States
+  &.default {
+    border: $ui-border-base solid $ui-color-gray-900;
+    color: $ui-color-gray-900;
+    background: {
+      color: $ui-base-color-white;
+    }
+  }
+  &.default svg {
+    fill: $ui-color-gray-900;
+  }
+  &.primary {
+    border: $ui-border-base solid $ui-color-primary-border;
+    color: $ui-color-primary-main;
+    background: {
+      color: $ui-color-primary-secondary;
+    }
+  }
+  &.primary svg {
+    fill: $ui-color-primary-main;
+  }
+  &.success {
+    border: $ui-border-base solid $ui-color-success-border;
+    color: $ui-color-success-main;
+    background: {
+      color: $ui-color-success-secondary;
+    }
+    & svg {
+      fill: $ui-color-success-main;
+    }
+  }
+  &.info {
+    border: $ui-border-base solid $ui-color-info-border;
+    color: $ui-color-info-main;
+    background: {
+      color: $ui-color-info-secondary;
+    }
+    & svg {
+      fill: $ui-color-info-main;
+    }
+  }
+  &.warning {
+    border: $ui-border-base solid $ui-color-warning-border;
+    color: $ui-color-warning;
+    background: {
+      color: $ui-color-warning-secondary;
+    }
+    & svg {
+      fill: $ui-color-warning-main;
+    }
+  }
+  &.danger {
+    border: $ui-border-base solid $ui-color-danger-border;
+    color: $ui-color-danger-main;
+    background: {
+      color: $ui-color-danger-secondary;
+    }
+    & svg {
+      fill: $ui-color-danger-main;
+    }
+  }
+}
