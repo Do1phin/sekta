@@ -16,7 +16,7 @@
   }
 
   // Content
-  .icon {
+  &__icon {
     display: flex;
     justify-content: center;
 
@@ -38,7 +38,7 @@
       width: calc($ui-step * 5);
     }
   }
-  .text {
+  &__text {
     align-items: center;
 
     &.small {
