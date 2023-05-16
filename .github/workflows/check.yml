@@ -25,7 +25,7 @@ jobs:
           path: ~/.npm
           key: npm-feature-${{ hashFiles('**/package-lock.json') }}
       - name: 🧩 Install dependencies
-        run: npm сi
+        run: npm install
       - name: 🛠 Lint
         run: npm run lint:check
       - name: 🎀 Pretty

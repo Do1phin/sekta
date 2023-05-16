@@ -2,6 +2,7 @@
   "arrowParens": "always",
   "bracketSpacing": true,
   "bracketSameLine": true,
+  "endOfLine": "auto",
   "jsxSingleQuote": true,
   "printWidth": 100,
   "requirePragma": false,
