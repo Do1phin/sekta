@@ -14,7 +14,7 @@
     height: calc($ui-step * 8);
     width: calc($ui-step * 8);
   }
-  &__label span {
+  &__label {
     font: {
       family: 'Primary Medium', sans-serif;
       size: 20px;
@@ -46,7 +46,7 @@
     display: none;
   }
 
-  // States
+  // Styles
   &.primary {
     border: $ui-border-base solid $ui-color-primary-border;
     background: {
