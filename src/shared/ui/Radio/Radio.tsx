@@ -12,7 +12,7 @@ interface IRadioProps {
 }
 
 const Radio: FC<IRadioProps> = (props) => {
-  const { checked, disabled, onChange, label, value } = props;
+  const { checked = false, disabled = false, onChange, label, value } = props;
 
   return (
     <label className={cx(css['custom-radio'], { checked: checked, disabled: disabled })}>
