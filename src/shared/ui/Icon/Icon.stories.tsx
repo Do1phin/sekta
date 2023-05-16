@@ -7,8 +7,7 @@ import { Icon } from './Icon';
 const meta: Meta<typeof Icon> = {
   args: {
     icon: 'alien',
-    size: 'normal',
-    state: 'default',
+    style: 'default',
   },
   component: Icon,
   title: 'UI-Kit/Icons',
@@ -29,18 +28,18 @@ export const Default: Story = {
   render: (args) => <Icon {...args} />,
 };
 
-export const IconStates: Story = {
+export const IconStyles: Story = {
   args: {
     icon: 'alien',
   },
   render: (args) => (
     <div className='icons' style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
-      <Icon {...args} size={'mega'} state={'default'} />
-      <Icon {...args} size={'mega'} state={'primary'} />
-      <Icon {...args} size={'mega'} state={'success'} />
-      <Icon {...args} size={'mega'} state={'info'} />
-      <Icon {...args} size={'mega'} state={'danger'} />
-      <Icon {...args} size={'mega'} state={'warning'} />
+      <Icon {...args} size={'mega'} style={'default'} />
+      <Icon {...args} size={'mega'} style={'primary'} />
+      <Icon {...args} size={'mega'} style={'success'} />
+      <Icon {...args} size={'mega'} style={'info'} />
+      <Icon {...args} size={'mega'} style={'danger'} />
+      <Icon {...args} size={'mega'} style={'warning'} />
     </div>
   ),
 };
@@ -63,7 +62,7 @@ export const IconSizes: Story = {
 export const AllIcons: Story = {
   args: {
     size: 'mega',
-    state: 'primary',
+    style: 'primary',
   },
   render: (args) => (
     <div className='icons' style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>

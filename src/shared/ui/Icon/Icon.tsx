@@ -3,25 +3,23 @@ import React, { FC } from 'react';
 
 import css from './Icon.module.scss';
 import icons from '../../icons/icons.svg';
-
-type StateType = 'default' | 'primary' | 'success' | 'info' | 'danger' | 'warning';
-type IconSize = 'small' | 'normal' | 'large' | 'extra-large' | 'mega';
+import { ExtendSizeTypes, ExtendStyleTypes } from '../../types/componentTypes';
 
 interface IIconProps {
   icon: string;
-  size?: IconSize;
-  state?: StateType;
+  size?: ExtendSizeTypes;
+  style?: ExtendStyleTypes;
 }
 
 const Icon: FC<IIconProps> = (props) => {
-  const { state = '', icon = '', size = 'normal' } = props;
+  const { style = '', icon = '', size = 'normal' } = props;
 
   return (
-    <span className={cx(css.icon, css[state], css[size])}>
+    <picture className={cx(css.icon, css[style], css[size])}>
       <svg>
         <use xlinkHref={`${icons}#${icon}`} />
       </svg>
-    </span>
+    </picture>
   );
 };
 

@@ -4,15 +4,15 @@
 .icon {
   align-items: center;
   display: flex;
+  height: 100%;
   justify-content: center;
+  width: 100%;
 
   & svg {
     fill: $ui-base-color-black;
     align-items: center;
     display: flex;
-    height: 1rem;
     justify-content: center;
-    width: 1rem;
   }
 
   // Size
