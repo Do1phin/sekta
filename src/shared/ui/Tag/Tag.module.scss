@@ -15,6 +15,43 @@
     color: $ui-color-gray-200;
   }
 
+  // Content
+  .icon {
+    display: flex;
+    justify-content: center;
+
+    & svg {
+      height: 100%;
+      width: 100%;
+    }
+
+    &.small svg {
+      height: calc($ui-step * 3.5);
+      width: calc($ui-step * 3.5);
+    }
+    &.normal svg {
+      height: calc($ui-step * 4);
+      width: calc($ui-step * 4);
+    }
+    &.large svg {
+      height: calc($ui-step * 5);
+      width: calc($ui-step * 5);
+    }
+  }
+  .text {
+    align-items: center;
+
+    &.small {
+      font-size: calc($ui-fontsize-small);
+    }
+    &.normal {
+      font-size: calc($ui-fontsize-base);
+    }
+    &.large {
+      font-size: calc($ui-fontsize-large);
+    }
+  }
+
   // Icon position
   &.left {
     flex-direction: row;
@@ -24,6 +61,16 @@
   }
 
   // States
+  &.default {
+    border: $ui-border-base solid $ui-color-gray-900;
+    color: $ui-color-gray-900;
+    background: {
+      color: $ui-base-color-white;
+    }
+  }
+  &.default svg {
+    fill: $ui-color-gray-900;
+  }
   &.primary {
     border: $ui-border-base solid $ui-color-primary-border;
     color: $ui-color-primary-main;
