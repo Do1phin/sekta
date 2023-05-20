@@ -95,6 +95,7 @@
     "webpack-merge": "^5.8.0"
   },
   "type": "module",
+  "proxy": "http://localhost:3000",
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "npm run lint:fix"
