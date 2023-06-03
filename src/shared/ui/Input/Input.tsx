@@ -2,50 +2,47 @@ import cx from 'classnames';
 import React, { FC } from 'react';
 
 import css from './Input.module.scss';
+import { IInputProps } from './Input.types';
 import icons from '../../icons/icons.svg';
-import { StyleTypes } from '../../types/componentTypes';
-
-interface IInputProps {
-  children?: string;
-  disabled?: boolean;
-  helper?: string;
-  icon?: string;
-  label?: string;
-  onChange: () => void;
-  placeholder?: string;
-  style?: StyleTypes;
-}
 
 const Input: FC<IInputProps> = (props) => {
   const {
-    disabled = false,
     children,
+    className = '',
+    disabled = false,
     placeholder,
     helper,
+    onBlur,
     onChange,
-    style = 'default',
+    style = 'basic',
+    type = 'text',
     icon,
     label,
+    value,
   } = props;
 
   return (
-    <div className={cx(css.input, style && css[style])} disabled={disabled}>
-      {label && <span className={css.input__label}>{label}</span>}
-      <div className={css.input__input}>
-        <input onChange={onChange} placeholder={placeholder ? placeholder : ''} value={children} />
+    <div className={cx(css.input, style && css[style], disabled && css.disabled, className)}>
+      {label && <span className={css.label}>{label}</span>}
+      <div className={css.field}>
+        {children}
+        <input
+          disabled={disabled}
+          type={type}
+          onBlur={onBlur}
+          onChange={onChange}
+          placeholder={placeholder ?? ''}
+          value={value}
+        />
         {icon && (
-          <picture className={cx(css.input__icon)}>
+          <picture className={cx(css.icon)}>
             <svg>
               <use xlinkHref={`${icons}#${icon}`} />
             </svg>
           </picture>
         )}
       </div>
-      {helper && (
-        <span className={css.input__helper} disabled={disabled}>
-          {helper}
-        </span>
-      )}
+      {helper && <span className={cx(css.helper, disabled && css.disabled)}>{helper}</span>}
     </div>
   );
 };
