@@ -2,19 +2,13 @@ import cx from 'classnames';
 import React, { FC } from 'react';
 
 import css from './Text.module.scss';
-import { ExtendStyleTypes } from '../../types/componentTypes';
-
-interface ITextProps {
-  children: string;
-  fontSize?: string;
-  style?: ExtendStyleTypes;
-}
+import { ITextProps } from './Text.types';
 
 const Text: FC<ITextProps> = (props) => {
-  const { children, fontSize = '14px', style = 'default' } = props;
+  const { children, className = '', fontSize = '14px', style = 'basic' } = props;
 
   return (
-    <span style={{ fontSize: fontSize }} className={cx(css.text, css[style])}>
+    <span className={cx(css.text, css[style], className)} style={{ fontSize: fontSize }}>
       {children}
     </span>
   );
