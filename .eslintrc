@@ -16,9 +16,10 @@
     "plugin:promise/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:json/recommended",
-    "plugin:typescript-sort-keys/recommended"
+    "plugin:typescript-sort-keys/recommended",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
   ],
-  "plugins": ["react", "prettier", "@typescript-eslint", "json"],
+  "plugins": ["react", "prettier", "@typescript-eslint", "json", "@tanstack/query"],
   "rules": {
     "prettier/prettier": "error",
     "semi": ["error", "always"],
