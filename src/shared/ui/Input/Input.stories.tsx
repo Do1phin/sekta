@@ -30,13 +30,7 @@ export default meta;
 type Story = StoryObj<typeof Input>;
 
 export const Default: Story = {
-  render: (args) => (
-    <Input
-      {...args}
-      onBlur={() => console.log('onBlur event')}
-      onChange={() => console.log('onChange event')}
-    />
-  ),
+  render: (args) => <Input {...args} onBlur={() => null} onChange={() => null} />,
 };
 
 export const InputStyles: Story = {
