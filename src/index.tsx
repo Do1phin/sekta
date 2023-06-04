@@ -3,7 +3,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { I18nextProvider } from 'react-i18next';
 
-import { App } from './app/components';
+import { App } from './app/ui';
 import i18n from '../i18n';
 
 declare global {
@@ -21,9 +21,9 @@ if (window.SENTRY_RELEASE) {
   });
 }
 
-const root = createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-  <Sentry.ErrorBoundary fallback='error'>
+  <Sentry.ErrorBoundary fallback={<p>Loading...</p>}>
     <I18nextProvider i18n={i18n}>
       <App />
     </I18nextProvider>
