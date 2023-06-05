@@ -1,5 +1,31 @@
 {
-  "app": {
-    "fish": "Text for test"
+  "page": {
+    "auth": {
+      "email-placeholder": "Email address",
+      "pass-placeholder": "Password",
+      "login-title": "Log in",
+      "login-failed": "Login failed",
+      "register-title": "Registration",
+      "register-success": "Registration completed successfully",
+      "register-failed": "Registration failed",
+      "user-exists": "User already exist",
+      "another-email": "Enter another email",
+      "go-register": "Registration",
+      "go-login": "Login",
+      "doesnt-have-account": "Doesn't have an account yet?",
+      "have-account": "Already have an account?",
+      "remember-me": "Remember me",
+      "forgot-password": "Forgot password",
+      "login-social": "Sign in with {{value}}",
+      "register-social": "Sign up with {{value}}"
+    }
+  },
+  "validate": {
+    "error": {
+      "empty-input": "The {{value}} field cannot be empty!",
+      "email-input": "Поле {{value}} должно содержать email!",
+      "min-length-input": "Поле должно быть не менее {{value}} символов!",
+      "max-length-input": "Поле должно быть не более {{value}} символов!"
+    }
   }
 }

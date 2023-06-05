@@ -1,20 +1,20 @@
 @import 'src/shared/styles/colors';
 @import 'src/shared/styles/variables';
 
-.custom-radio {
+.radio {
   margin-bottom: 0.2em;
 
-  & > input {
+  & > .field {
     opacity: 0;
     position: absolute;
     z-index: -1;
   }
-  & > span {
+  & > .label {
     align-items: center;
     display: inline-flex;
     user-select: none;
   }
-  & > span::before {
+  & > .label::before {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 50% 50%;
@@ -30,23 +30,29 @@
   }
 
   // Styles
-  & > input:not(:disabled):not(:checked) + span:hover::before {
+  & > .field:not(:disabled):not(:checked) + .label:hover::before {
     border-color: $ui-color-primary-hover;
   }
-  & > input:not(:disabled):active + span::before {
+  & > .field:not(.disabled):active + .label::before {
     background-color: $ui-color-primary-pressed;
   }
-  & > input:focus + span::before {
+  & > .field:focus + span::before {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   }
-  & > input:focus:not(:checked) + span::before {
+  & > .field:focus:not(:checked) + .label::before {
     border-color: $ui-color-primary-focus;
   }
-  & > input:disabled + span::before {
+  & > .field.disabled + .label::before {
     background-color: $ui-color-gray-500;
   }
-  & > input:checked + span::before {
+  & > .field:checked + .label::before {
     background: url('./../../icons/dot.svg') $ui-color-primary-main no-repeat center center;
     background-size: 50%;
+  }
+  &.disabled > .field:checked + span::before {
+    background-color: $ui-color-gray-500;
+  }
+  &.disabled > .field:checked + span {
+    color: $ui-color-gray-400;
   }
 }

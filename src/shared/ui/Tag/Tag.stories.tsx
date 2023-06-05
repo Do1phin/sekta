@@ -19,9 +19,12 @@ const meta: Meta<typeof Tag> = {
     },
     style: {
       control: 'select',
-      defaultValue: 'default',
+      defaultValue: 'basic',
       description: 'Tag state',
     },
+  },
+  args: {
+    disabled: false,
   },
   component: Tag,
   decorators: [withDesign],
@@ -33,17 +36,17 @@ type Story = StoryObj<typeof Tag>;
 
 export const Default: Story = {
   args: {
-    style: 'default',
-    text: 'Default Tag',
+    style: 'basic',
+    text: 'Basic Tag',
   },
-  render: (args) => <Tag {...args}>Default Tag</Tag>,
+  render: (args) => <Tag {...args} text={'Basic Tag'} />,
 };
 
 export const TagSizes: Story = {
   render: (args) => (
     <>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginBottom: '20px' }}>
-        <Tag {...args} style={'default'} size={'small'} text={'Default Tag'} />
+        <Tag {...args} style={'basic'} size={'small'} text={'Basic Tag'} />
         <Tag {...args} style={'primary'} size={'small'} text={'Primary Tag'} />
         <Tag {...args} style={'success'} size={'small'} text={'Success Tag'} />
         <Tag {...args} style={'info'} size={'small'} text={'Info Tag'} />
@@ -51,7 +54,7 @@ export const TagSizes: Story = {
         <Tag {...args} style={'warning'} size={'small'} text={'Warning Tag'} />
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginBottom: '20px' }}>
-        <Tag {...args} style={'default'} size={'normal'} text={'Default Tag'} />
+        <Tag {...args} style={'basic'} size={'normal'} text={'Basic Tag'} />
         <Tag {...args} style={'primary'} size={'normal'} text={'Primary Tag'} />
         <Tag {...args} style={'success'} size={'normal'} text={'Success Tag'} />
         <Tag {...args} style={'info'} size={'normal'} text={'Info Tag'} />
@@ -59,7 +62,7 @@ export const TagSizes: Story = {
         <Tag {...args} style={'warning'} size={'normal'} text={'Warning Tag'} />
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
-        <Tag {...args} style={'default'} size={'large'} text={'Default Tag'} />
+        <Tag {...args} style={'basic'} size={'large'} text={'Basic Tag'} />
         <Tag {...args} style={'primary'} size={'large'} text={'Primary Tag'} />
         <Tag {...args} style={'success'} size={'large'} text={'Success Tag'} />
         <Tag {...args} style={'info'} size={'large'} text={'Info Tag'} />
@@ -74,15 +77,9 @@ export const TagStyles: Story = {
   render: (args) => (
     <>
       <div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
-        <Tag {...args} style={'default'} text={'Default Tag'} />
-        <Tag {...args} style={'default'} text={'Default Tag'} icon={'alien'} />
-        <Tag
-          {...args}
-          style={'default'}
-          text={'Default Tag'}
-          icon={'alien'}
-          iconPosition={'right'}
-        />
+        <Tag {...args} style={'basic'} text={'Basic Tag'} />
+        <Tag {...args} style={'basic'} text={'Basic Tag'} icon={'alien'} />
+        <Tag {...args} style={'basic'} text={'Basic Tag'} icon={'alien'} iconPosition={'right'} />
       </div>
       <div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
         <Tag {...args} style={'primary'} text={'Primary Tag'} />

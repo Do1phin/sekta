@@ -7,12 +7,17 @@
   height: 100%;
   justify-content: center;
   width: 100%;
+  border: none;
+  background-color: transparent;
 
   & svg {
     fill: $ui-base-color-black;
     align-items: center;
     display: flex;
     justify-content: center;
+  }
+  &.cursor {
+    cursor: pointer;
   }
 
   // Size
@@ -38,10 +43,10 @@
   //}
 
   // Color
-  &.default svg {
+  &.basic svg {
     fill: $ui-color-gray-main;
   }
-  &.primary> svg {
+  &.primary > svg {
     fill: $ui-color-primary-main;
   }
   &.info svg {

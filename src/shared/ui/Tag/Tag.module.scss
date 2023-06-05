@@ -1,5 +1,5 @@
-@import 'src/shared/styles/variables';
 @import 'src/shared/styles/colors';
+@import 'src/shared/styles/variables';
 
 .tag {
   align-items: center;
@@ -12,17 +12,18 @@
   padding: calc($ui-step / 2) calc($ui-step * 2);
   width: fit-content;
   background: {
-    color: $ui-color-gray-200;
+    color: $ui-base-color-white;
   }
 
   // Content
-  &__icon {
+  .icon {
     display: flex;
     justify-content: center;
 
     & svg {
       height: 100%;
       width: 100%;
+      fill: $ui-color-gray-500;
     }
 
     &.small svg {
@@ -38,7 +39,7 @@
       width: calc($ui-step * 5);
     }
   }
-  &__text {
+  .text {
     align-items: center;
 
     &.small {
@@ -60,15 +61,15 @@
     flex-direction: row-reverse;
   }
 
-  // States
-  &.default {
-    border: $ui-border-base solid $ui-color-gray-900;
-    color: $ui-color-gray-900;
+  // Styles
+  & .basic {
+    border: $ui-border-base solid $ui-color-gray-600;
+    color: $ui-color-gray-600;
     background: {
       color: $ui-base-color-white;
     }
   }
-  &.default svg {
+  & .basic svg {
     fill: $ui-color-gray-900;
   }
   &.primary {
@@ -121,4 +122,15 @@
       fill: $ui-color-danger-main;
     }
   }
+  &.disabled {
+    border: $ui-border-base solid $ui-color-gray-400;
+    color: $ui-color-gray-400;
+    background: {
+      color: $ui-color-gray-200;
+    }
+  }
+  &.disabled svg {
+    fill: $ui-color-gray-400;
+  }
 }
+

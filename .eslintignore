@@ -4,6 +4,7 @@ coverage/
 src/shared/assets/
 **/*.scss
 **/*.html
+**/*.jpg
 **/*.svg
 **/*.png
 **/*.woff

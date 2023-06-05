@@ -1,8 +1,21 @@
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
-const preview = {
+import { globalDecorators } from './decorators';
+import i18n from '../i18n';
+import { localeToolbar } from '../src/app/config/i18n';
+
+export const globalTypes = {
+  i18n,
+  localeToolbar,
+};
+
+i18n.on('languageChanged', (locale) => {
+  const direction = i18n.dir(locale);
+  document.dir = direction;
+});
+
+export const preview = {
   a11y: {
-    disable: false,
     config: {
       rules: [
         {
@@ -10,11 +23,12 @@ const preview = {
           selector: '*:not([autocomplete="nope"])',
         },
         {
-          id: 'autocomplete-valid',
           enabled: false,
+          id: 'autocomplete-valid',
         },
       ],
     },
+    disable: false,
   },
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -30,4 +44,4 @@ const preview = {
   },
 };
 
-export default preview;
+export const decorators = globalDecorators;

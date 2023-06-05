@@ -1,5 +1,31 @@
 {
-  "app": {
-    "fish": "Текст для тесту"
+  "page": {
+    "auth": {
+      "email-placeholder": "Email адреса",
+      "pass-placeholder": "Пароль",
+      "login-title": "Авторизація",
+      "login-failed": "Помилкка при авторизації",
+      "register-title": "Реєстрація",
+      "register-success": "Реєстрація пройшла успішно",
+      "register-failed": "Помилка при реєстрації",
+      "user-exists": "Користувач уже існує",
+      "another-email": "Введіть інший email",
+      "go-register": "Зареєструватися",
+      "go-login": "Авторизуватися",
+      "doesnt-have-account": "У вас ще немає облікового запису?",
+      "have-account": "Вже є обліковий запис?",
+      "remember-me": "Запам'ятати мене",
+      "forgot-password": "Забули пароль",
+      "login-social": "Увійти через {{value}}",
+      "register-social": "Увійти через {{value}}"
+    }
+  },
+  "validate": {
+    "error": {
+      "empty-input": "Поле email не може бути порожнім!",
+      "email-input": "Поле {{value}} має містити email!",
+      "min-length-input": "Поле повинно бути не меньше {{value}} символів!",
+      "max-length-input": "Поле повинно бути не більше {{value}} символів!"
+    }
   }
 }

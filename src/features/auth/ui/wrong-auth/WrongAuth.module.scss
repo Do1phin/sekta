@@ -1,0 +1,19 @@
+@import 'src/shared/styles/variables';
+
+.wrong {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 100%;
+  width: 50%;
+  padding: calc($ui-step * 10);
+}
+.title {
+  @include h2();
+}
+.failed-image {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+}

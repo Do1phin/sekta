@@ -1,7 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Notification } from './Notification';
+import { INotificationProps } from './Notification.types';
 
 const meta: Meta<typeof Notification> = {
   args: {
@@ -9,7 +10,6 @@ const meta: Meta<typeof Notification> = {
     label: 'Notification Label',
     message:
       'Sent to find a missing billionaire on a remote island, you find yourself in a cannibal-infested hellscape.',
-    onClose: () => alert('click'),
   },
   component: Notification,
   title: 'UI-Kit/Notification',
@@ -18,8 +18,14 @@ export default meta;
 
 type Story = StoryObj<typeof Notification>;
 
+const NotificationWithHooks = (args: INotificationProps) => {
+  const [open, setOpen] = useState(true);
+
+  return <Notification {...args} isOpen={open} onCloseClick={() => setOpen(!open)} />;
+};
+
 export const Default: Story = {
-  render: (args) => <Notification {...args} />,
+  render: (args) => <NotificationWithHooks {...args} />,
 };
 
 export const NotificationStyles: Story = {

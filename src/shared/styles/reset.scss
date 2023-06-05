@@ -95,8 +95,7 @@ input::-ms-clear {
 
 button,
 input[type='submit'] {
-  background: none;
-  background-color: transparent;
+  background: transparent none;
   box-shadow: none;
   cursor: pointer;
   display: inline-block;

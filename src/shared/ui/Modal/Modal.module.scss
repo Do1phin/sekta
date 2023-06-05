@@ -10,38 +10,38 @@
   gap: calc($ui-step * 2);
   padding: calc($ui-step * 6);
 
-  &__icon  {
+  .icon {
     height: calc($ui-step * 8);
     width: calc($ui-step * 8);
   }
-  &__label {
+  .label {
     font: {
       family: 'Primary Medium', sans-serif;
       size: 20px;
     }
   }
-  &__content {
+  .content {
     display: flex;
     flex-direction: column;
     gap: 8px;
     width: 100%;
   }
-  &__header {
+  .header {
     display: flex;
     gap: calc($ui-step * 2);
     justify-content: space-between;
     position: relative;
   }
-  &__close-btn {
+  .close-btn {
     cursor: pointer;
     height: calc($ui-step * 6);
     width: calc($ui-step * 6);
   }
-  &__message {
+  .message {
     font-family: 'Primary Regular', sans-serif;
     font-size: $ui-fontsize-large;
   }
-  &__controls {
+  .controls {
     display: flex;
     gap: calc($ui-step * 2);
     justify-content: flex-end;
@@ -53,35 +53,20 @@
     display: none;
   }
 
-  // States
+  // Style
   &.primary {
     border: $ui-border-base solid $ui-color-primary-border;
-    background: {
-      //color: $ui-color-primary-secondary;
-    }
   }
   &.success {
     border: $ui-border-base solid $ui-color-success-border;
-    background: {
-      //color: $ui-color-success-secondary;
-    }
   }
   &.info {
     border: $ui-border-base solid $ui-color-info-border;
-    background: {
-      //color: $ui-color-info-secondary;
-    }
   }
   &.warning {
     border: $ui-border-base solid $ui-color-warning-border;
-    background: {
-      //color: $ui-color-warning-secondary;
-    }
   }
   &.danger {
     border: $ui-border-base solid $ui-color-danger-border;
-    background: {
-      //color: $ui-color-danger-secondary;
-    }
   }
 }

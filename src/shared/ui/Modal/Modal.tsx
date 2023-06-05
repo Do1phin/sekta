@@ -2,19 +2,8 @@ import cx from 'classnames';
 import React, { FC } from 'react';
 
 import css from './Modal.module.scss';
+import { IModalProps } from './Modal.types';
 import { Button, Icon } from '../';
-import { StyleTypes } from '../../types/componentTypes';
-
-interface IModalProps {
-  icon?: string;
-  isOpen?: boolean;
-  label: string;
-  message: string;
-  onCancelClick: () => void;
-  onCloseClick: () => void;
-  onOkClick: () => void;
-  style: StyleTypes;
-}
 
 const Modal: FC<IModalProps> = (props) => {
   const {
@@ -31,19 +20,19 @@ const Modal: FC<IModalProps> = (props) => {
   return (
     <div className={cx(css.modal, css[style], { [css.close]: !isOpen })}>
       {icon && (
-        <div className={css.modal__icon}>
+        <div className={css.icon}>
           <Icon icon={icon} style={style} />
         </div>
       )}
-      <div className={css.modal__content}>
-        <div className={css.modal__header}>
-          <span className={css.modal__label}>{label}</span>
-          <div className={css['modal__close-btn']}>
+      <div className={css.content}>
+        <div className={css.header}>
+          <span className={css.label}>{label}</span>
+          <div className={css['close-btn']}>
             <Icon icon='x' onClick={onCloseClick} />
           </div>
         </div>
-        <span className={css.modal__message}>{message}</span>
-        <div className={css.modal__controls}>
+        <span className={css.message}>{message}</span>
+        <div className={css.controls}>
           <Button onClick={onOkClick} type={'primary'} style={style} text={'Okay'} />
           <Button onClick={onCancelClick} type={'secondary'} style={style} text={'Cancel'} />
         </div>

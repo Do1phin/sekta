@@ -1,9 +1,13 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import path from 'path';
+import * as path from 'path';
+import SpeedMeasurePlugin from 'speed-measure-webpack-plugin';
 import type { Configuration } from 'webpack';
-const mode = process.env.NODE_ENV || 'none';
+import * as webpack from 'webpack';
 
-const commonConfig: Configuration = {
+const mode = process.env.NODE_ENV || 'none';
+const smp = new SpeedMeasurePlugin();
+
+const commonConfig: Configuration = smp.wrap({
   entry: {
     index: './src/index.tsx',
   },
@@ -11,8 +15,12 @@ const commonConfig: Configuration = {
   module: {
     rules: [
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'assert/resource',
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.svg$/,
+        type: 'asset/inline',
       },
       {
         exclude: [/node_modules/],
@@ -25,7 +33,7 @@ const commonConfig: Configuration = {
       },
       {
         generator: {
-          filename: 'assets/fonts/[name][ext]',
+          filename: './assets/fonts/[name][ext]',
         },
         test: /\.woff2?$/i,
         type: 'asset/resource',
@@ -33,10 +41,10 @@ const commonConfig: Configuration = {
     ],
   },
   output: {
-    assetModuleFilename: 'assets/icons/[name][ext]',
-    chunkFilename: './[name].[contenthash:8].chunk.js',
+    assetModuleFilename: './assets/icons/[name][ext]',
+    chunkFilename: './[name].[contenthash:5].chunk.js',
     clean: true,
-    filename: './[name].[contenthash:8].js',
+    filename: './[name].[contenthash:5].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
   },
@@ -44,10 +52,19 @@ const commonConfig: Configuration = {
     new HtmlWebpackPlugin({
       template: 'src/app/index.html',
     }),
+    new webpack.ProgressPlugin({
+      activeModules: true,
+      dependencies: true,
+      dependenciesCount: 10000,
+      entries: true,
+      modules: true,
+      percentBy: 'entries',
+    }),
   ],
+  profile: true,
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
-};
+});
 
 export { commonConfig };

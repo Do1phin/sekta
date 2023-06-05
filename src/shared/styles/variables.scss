@@ -1,5 +1,6 @@
 $ui-step: 4px;
 
+$ui-index-negative: -1;
 $ui-index-1: 1;
 $ui-index-2: 2;
 $ui-index-3: 3;
@@ -29,3 +30,21 @@ $ui-fontsize-base: 14px;
 $ui-fontsize-large: 16px;
 $ui-fontsize-extra-large: 18px;
 $ui-fontsize-mega: 20px;
+
+@mixin h1 {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+}
+@mixin h2 {
+  font-size: 34px;
+}
+@mixin h3 {
+  font-size: 30px;
+}
+@mixin h4 {
+  font-size: 24px;
+}
+@mixin h5 {
+  font-size: 20px;
+}

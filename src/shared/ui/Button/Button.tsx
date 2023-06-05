@@ -1,36 +1,22 @@
-import type {
-  IconPositionTypes,
-  SizeTypes,
-  StyleTypes,
-  TypeTypes,
-} from '../../types/componentTypes';
 import cx from 'classnames';
 import React, { FC } from 'react';
 
 import css from './Button.module.scss';
+import { IButtonProps } from './Button.types';
+import spinner from '../../icons/3dot-spinner.svg';
 import icons from '../../icons/icons.svg';
-
-interface IButtonProps {
-  disabled?: boolean;
-  icon?: string;
-  iconPosition?: IconPositionTypes;
-  onClick: () => void;
-  size?: SizeTypes;
-  style?: StyleTypes;
-  text?: string;
-  type?: TypeTypes;
-}
 
 const Button: FC<IButtonProps> = (props) => {
   const {
     disabled = false,
     icon,
-    iconPosition,
+    iconPosition = 'left',
     onClick,
     size = 'normal',
     style,
     text,
     type = 'primary',
+    loader = false,
   } = props;
 
   return (
@@ -45,12 +31,17 @@ const Button: FC<IButtonProps> = (props) => {
       )}
       disabled={disabled}
       onClick={onClick}>
-      {icon && (
+      {icon && !loader && (
         <svg className={css.icon}>
           <use xlinkHref={`${icons}#${icon}`} />
         </svg>
       )}
-      {text && <span className={css.text}>{text}</span>}
+      {text && !loader && <span className={css.text}>{text}</span>}
+      {loader && (
+        <svg className={css.loading}>
+          <use xlinkHref={`${spinner}`} />
+        </svg>
+      )}
     </button>
   );
 };
