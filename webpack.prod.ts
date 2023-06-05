@@ -1,8 +1,9 @@
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import SentryCliPlugin from '@sentry/webpack-plugin';
+import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import merge from 'webpack-merge';
 
-import { commonConfig } from './webpack.common.ts';
-const { sentryWebpackPlugin } = import('@sentry/webpack-plugin');
+import { commonConfig } from './webpack.common';
+
 const mode = process.env.NODE_ENV || 'production';
 
 const prodConfig = merge(commonConfig, {
@@ -15,18 +16,43 @@ const prodConfig = merge(commonConfig, {
           filename: './styles/[name][query][ext]',
         },
         test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                auto: true,
+                localIdentName: '[hash:base64:5]',
+                mode: 'local',
+              },
+            },
+          },
+          'postcss-loader',
+          'sass-loader',
+        ],
       },
     ],
   },
   optimization: {
     splitChunks: {
-      chunks: 'all',
+      cacheGroups: {
+        common: {
+          chunks: 'all',
+          minSize: 0,
+          test: /[\\/]src[\\/]/,
+        },
+        vendor: {
+          chunks: 'all',
+          name: 'node_vendors',
+          test: /[\\/]node_modules[\\/]/,
+        },
+      },
     },
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style.css',
+      filename: './assets/styles/style.css',
     }),
   ],
   resolve: {
@@ -36,7 +62,7 @@ const prodConfig = merge(commonConfig, {
 
 if (process.env.SENTRY_RELEASE) {
   prodConfig.plugins.push(
-    sentryWebpackPlugin({
+    new SentryCliPlugin({
       authToken: process.env.SENTRY_AUTH_TOKEN,
       ignore: ['node_modules', 'webpack.dev.ts'],
       include: './dist',
