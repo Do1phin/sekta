@@ -30,90 +30,52 @@ export default meta;
 type Story = StoryObj<typeof Input>;
 
 export const Default: Story = {
-  render: (args) => <Input onChange={args.onChange} />,
+  render: (args) => <Input {...args} onBlur={() => null} onChange={() => null} />,
 };
 
 export const InputStyles: Story = {
   render: (args) => (
     <>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
-        <Input onChange={args.onChange} style={'info'} />
-        <Input onChange={args.onChange} style={'info'} label={'Label'} />
-        <Input onChange={args.onChange} style={'info'} label={'Label'} helper={'Helper'} />
-        <Input
-          onChange={args.onChange}
-          style={'info'}
-          label={'Label'}
-          helper={'Helper'}
-          icon={'alien'}
-        />
+        <Input {...args} style={'info'} />
+        <Input {...args} style={'info'} label={'Label'} />
+        <Input {...args} style={'info'} label={'Label'} helper={'Helper'} />
+        <Input {...args} style={'info'} label={'Label'} helper={'Helper'} icon={'alien'} />
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
-        <Input onChange={args.onChange} style={'danger'} />
-        <Input onChange={args.onChange} style={'danger'} label={'Label'} />
-        <Input onChange={args.onChange} style={'danger'} label={'Label'} helper={'Helper'} />
-        <Input
-          onChange={args.onChange}
-          style={'danger'}
-          label={'Label'}
-          helper={'Helper'}
-          icon={'alien'}
-        />
+        <Input {...args} style={'danger'} />
+        <Input {...args} style={'danger'} label={'Label'} />
+        <Input {...args} style={'danger'} label={'Label'} helper={'Helper'} />
+        <Input {...args} style={'danger'} label={'Label'} helper={'Helper'} icon={'alien'} />
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
-        <Input onChange={args.onChange} style={'success'} />
-        <Input onChange={args.onChange} style={'success'} label={'Label'} />
-        <Input onChange={args.onChange} style={'success'} label={'Label'} helper={'Helper'} />
-        <Input
-          onChange={args.onChange}
-          style={'success'}
-          label={'Label'}
-          helper={'Helper'}
-          icon={'alien'}
-        />
+        <Input {...args} style={'success'} />
+        <Input {...args} style={'success'} label={'Label'} />
+        <Input {...args} style={'success'} label={'Label'} helper={'Helper'} />
+        <Input {...args} style={'success'} label={'Label'} helper={'Helper'} icon={'alien'} />
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
-        <Input onChange={args.onChange} style={'warning'} />
-        <Input onChange={args.onChange} style={'warning'} label={'Label'} />
-        <Input onChange={args.onChange} style={'warning'} label={'Label'} helper={'Helper'} />
-        <Input
-          onChange={args.onChange}
-          style={'warning'}
-          label={'Label'}
-          helper={'Helper'}
-          icon={'alien'}
-        />
+        <Input {...args} style={'warning'} />
+        <Input {...args} style={'warning'} label={'Label'} />
+        <Input {...args} style={'warning'} label={'Label'} helper={'Helper'} />
+        <Input {...args} style={'warning'} label={'Label'} helper={'Helper'} icon={'alien'} />
       </div>
     </>
   ),
 };
 
 export const InputPlaceholder: Story = {
+  args: {
+    placeholder: 'Placeholder',
+    style: 'info',
+  },
   render: (args) => (
     <>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
-        <Input onChange={args.onChange} placeholder={'Placeholder'} style={'info'} />
-        <Input
-          onChange={args.onChange}
-          placeholder={'Placeholder'}
-          label={'Label'}
-          style={'info'}
-        />
-        <Input
-          helper={'Helper'}
-          label={'Label'}
-          onChange={args.onChange}
-          placeholder={'Placeholder'}
-          style={'info'}
-        />
-        <Input
-          helper={'Helper'}
-          label={'Label'}
-          onChange={args.onChange}
-          placeholder={'Placeholder'}
-          icon={'alien'}
-          style={'info'}
-        />
+        <Input {...args} />
+        <Input {...args} label={'Label'} />
+        <Input helper={'Helper'} label={'Label'} {...args} />
+        <Input helper={'Helper'} label={'Label'} {...args} icon={'alien'} />
       </div>
     </>
   ),

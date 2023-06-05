@@ -7,7 +7,7 @@ import { Icon } from './Icon';
 const meta: Meta<typeof Icon> = {
   args: {
     icon: 'alien',
-    style: 'default',
+    style: 'basic',
   },
   component: Icon,
   title: 'UI-Kit/Icons',
@@ -24,6 +24,7 @@ export const Default: Story = {
   },
   args: {
     icon: 'alien',
+    size: 'normal',
   },
   render: (args) => <Icon {...args} />,
 };
@@ -34,7 +35,7 @@ export const IconStyles: Story = {
   },
   render: (args) => (
     <div className='icons' style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
-      <Icon {...args} size={'mega'} style={'default'} />
+      <Icon {...args} size={'mega'} style={'basic'} />
       <Icon {...args} size={'mega'} style={'primary'} />
       <Icon {...args} size={'mega'} style={'success'} />
       <Icon {...args} size={'mega'} style={'info'} />

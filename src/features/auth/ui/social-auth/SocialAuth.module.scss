@@ -1,0 +1,10 @@
+@import 'src/shared/styles/variables';
+
+.social-register {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  padding: calc($ui-step * 10);
+}

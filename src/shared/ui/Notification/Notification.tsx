@@ -2,17 +2,8 @@ import cx from 'classnames';
 import React, { FC } from 'react';
 
 import css from './Notification.module.scss';
-import { StyleTypes } from '../../types/componentTypes';
+import { INotificationProps } from './Notification.types';
 import { Icon } from '../index';
-
-interface INotificationProps {
-  icon?: string;
-  isOpen?: boolean;
-  label: string;
-  message: string;
-  onCloseClick: () => void;
-  style: StyleTypes;
-}
 
 const Notification: FC<INotificationProps> = (props) => {
   const { label, icon, isOpen = true, onCloseClick, message, style } = props;
@@ -20,18 +11,18 @@ const Notification: FC<INotificationProps> = (props) => {
   return (
     <div className={cx(css.notification, css[style], { [css.close]: !isOpen })}>
       {icon && (
-        <div className={css.notification__icon}>
+        <div className={css.icon}>
           <Icon icon={icon} style={style} />
         </div>
       )}
-      <div className={css.notification__content}>
-        <div className={css.notification__header}>
-          <span className={css.notification__label}>{label}</span>
-          <div className={css['notification__close-btn']}>
+      <div className={css.content}>
+        <div className={css.header}>
+          <span className={css.label}>{label}</span>
+          <div className={css['close-btn']}>
             <Icon icon='x' onClick={onCloseClick} />
           </div>
         </div>
-        <span className={css.notification__message}>{message}</span>
+        <span className={css.message}>{message}</span>
       </div>
     </div>
   );

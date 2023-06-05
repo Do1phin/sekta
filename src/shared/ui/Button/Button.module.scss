@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: row;
   gap: $ui-step;
-  justify-content: start;
+  justify-content: center;
   padding: calc($ui-step * 2) calc($ui-step * 4);
   user-select: none;
   vertical-align: middle;
@@ -23,6 +23,13 @@
     fill: $ui-base-color-white;
     height: calc($ui-step * 4);
     width: calc($ui-step * 4);
+  }
+  .loading {
+    & svg {
+      margin: 0 auto;
+      fill: $ui-base-color-white;
+      background-color: $ui-color-primary-pressed;
+    }
   }
 
   // Icon Position

@@ -9,7 +9,6 @@ const meta: Meta<typeof Modal> = {
     label: 'Modal Header',
     message:
       'Sent to find a missing billionaire on a remote island, you find yourself in a cannibal-infested hellscape.',
-    onClose: () => alert('click'),
   },
   component: Modal,
   title: 'UI-Kit/Modal',

@@ -2,21 +2,20 @@
 @import 'src/shared/styles/variables';
 
 .input {
-  background-color: $ui-base-color-white;
   border-radius: $ui-radius;
   display: flex;
   flex-direction: column;
   gap: $ui-step;
 
-  &__label {
+  .label {
     color: $ui-base-color-black;
     font-family: 'Primary Regular', sans-serif;
     font-size: $ui-fontsize-large;
   }
 
-  &__input {
-    align-content: start;
-    align-items: start;
+  .field {
+    align-content: flex-start;
+    align-items: flex-start;
     color: $ui-color-gray-700;
     display: flex;
     justify-content: space-between;
@@ -34,7 +33,7 @@
     }
   }
 
-  &__icon {
+  .icon {
     content: '';
     height: calc($ui-step * 4);
     position: absolute;
@@ -50,70 +49,76 @@
     }
   }
 
-  &__helper {
+  .helper {
     color: $ui-color-gray-700;
     font-family: 'Primary Regular', sans-serif;
     font-size: $ui-fontsize-small;
-
-    &:disabled {
-      color: orange;
-    }
   }
 
   // Styles
-  &.info:not(:disabled) {
-    .input__input input {
+  &.info:not(.disabled) {
+    .field input {
       border: $ui-border-base solid $ui-color-info-main;
     }
-
-    .input__icon svg {
+    .icon svg {
       fill: $ui-color-info-main;
     }
-
-    .input__helper {
+    .helper {
       color: $ui-color-info-main;
     }
   }
 
-  &.success:not(:disabled) {
-    .input__input input {
+  &.success:not(.disabled) {
+    .field input {
       border: $ui-border-base solid $ui-color-success-main;
     }
-
-    .input__icon svg {
+    .icon svg {
       fill: $ui-color-success-main;
     }
-
-    .input__helper {
+    .helper {
       color: $ui-color-success-main;
     }
   }
 
-  &.danger:not(:disabled) {
-    .input__input input {
+  &.danger:not(.disabled) {
+    .field input {
       border: $ui-border-base solid $ui-color-danger-main;
     }
-
-    .input__icon svg {
+    .icon svg {
       fill: $ui-color-danger-main;
     }
-
-    .input__helper {
+    .helper {
       color: $ui-color-danger-main;
     }
   }
 
-  &.warning:not(:disabled) {
-    .input__input input {
+  &.warning:not(.disabled) {
+    .field input {
       border: $ui-border-base solid $ui-color-warning-main;
     }
-
-    .input__icon svg {
+    .icon svg {
       fill: $ui-color-warning-main;
     }
-
-    .input__helper {
+    .helper {
       color: $ui-color-warning-main;
+    }
+  }
+
+  &.disabled {
+    .label {
+      color: $ui-color-gray-400;
+    }
+    .field input {
+      border: $ui-border-base solid $ui-color-gray-400;
+    }
+    .field input::placeholder {
+      color: $ui-color-gray-400;
+    }
+    .icon svg {
+      fill: $ui-color-gray-400;
+    }
+    .helper {
+      color: $ui-color-gray-400;
     }
   }
 }

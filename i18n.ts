@@ -1,4 +1,4 @@
-import i18next from 'i18next';
+import { default as i18next } from 'i18next';
 import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector';
 import I18NextHttpBackend from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
@@ -10,11 +10,16 @@ i18next
   .use(I18NextHttpBackend)
   .use(initReactI18next)
   .init({
-    compatibilityJSON: 'v4',
     cleanCode: true,
+    compatibilityJSON: 'v4',
     debug: process.env.NODE_ENV === 'development',
     defaultNS: ['translations'],
     fallbackLng: 'ru',
+    interpolation: {
+      escapeValue: false,
+    },
+    keySeparator: '.',
+    lowerCaseLng: true,
     ns: ['translations'],
     resources: {
       en: {
@@ -27,10 +32,8 @@ i18next
         translations: ua,
       },
     },
-    keySeparator: '.',
-    lowerCaseLng: true,
-    supportedLngs: ['ru', 'ua', 'en'],
     saveMissing: true,
+    supportedLngs: ['ru', 'ua', 'en'],
     updateMissing: true,
   });
 

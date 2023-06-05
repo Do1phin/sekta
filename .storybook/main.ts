@@ -9,6 +9,7 @@ const config = {
     '@storybook/addon-measure',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
+    '@storybook/addon-toolbars',
     '@storybook/addon-viewport',
     '@storybook/preset-scss',
     'storybook-addon-designs',
