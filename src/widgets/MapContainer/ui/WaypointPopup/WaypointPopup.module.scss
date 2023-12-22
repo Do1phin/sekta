@@ -1,0 +1,110 @@
+@import '../../../../shared/styles/colors';
+@import '../../../../shared/styles/variables';
+
+.waypoint-popup {
+  box-sizing: border-box;
+  width: 466px;
+  height: fit-content;
+  color: cornflowerblue;
+  z-index: 1;
+}
+.waypoint-icon {
+  z-index: 777;
+}
+.header {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid $ui-color-gray-600;
+  font-size: $ui-fontsize-extra-large;
+
+  svg {
+    height: 46px;
+    width: 46px;
+  }
+}
+.buttons {
+  display: flex;
+  gap: 16px;
+  margin: 0 auto;
+}
+.controls {
+  display: flex;
+  gap: calc($ui-step * 3);
+  margin-left: auto;
+  justify-content: center;
+  height: fit-content;
+
+  & > svg {
+    fill: $ui-color-gray-900;
+  }
+}
+.type {
+  display: flex;
+  align-items: center;
+  font-size: $ui-fontsize-large;
+  gap: calc($ui-step * 3);
+  color: $ui-base-color-black;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+
+  .raw-title {
+    color: $ui-color-gray-900;
+    margin-right: 12px;
+    font-size: $ui-fontsize-large;
+  }
+
+  .body__raw {
+    color: $ui-color-gray-700;
+    font-size: $ui-fontsize-base;
+    margin: calc($ui-step * 1);
+    font-weight: 400;
+    @include FontPrimaryRegular;
+    display: flex;
+    align-items: flex-end;
+
+    & > span {
+      font-size: $ui-fontsize-base;
+      color: $ui-color-gray-900;
+      user-select: none;
+      //align-items: center;
+    }
+  }
+
+  .coords {
+    //display: inline-block;
+  }
+}
+.body__comment {
+  color: $ui-color-gray-700;
+  font-size: $ui-fontsize-base;
+  margin: calc($ui-step * 1);
+  display: flex;
+  flex-direction: column;
+  gap: $ui-step;
+
+  & textarea {
+    background-color: $ui-color-gray-100;
+    color: $ui-color-gray-700;
+    height: 100%;
+  }
+}
+.country-flag {
+  height: calc($ui-step * 6);
+  width: auto;
+  margin-right: calc($ui-step * 2);
+}
+
+.qr-codes-wrapper {
+  display: flex;
+  position: absolute;
+  top: calc($ui-step * 20);
+  right: calc($ui-step * 6.5);
+  flex-direction: column;
+  gap: calc($ui-step * 2);
+  padding: $ui-step;
+  background-color: $ui-base-color-black;
+  border-radius: $ui-step;
+}

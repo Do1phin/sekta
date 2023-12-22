@@ -1,0 +1,110 @@
+@import 'src/shared/styles/variables';
+@import 'src/shared/styles/colors';
+
+.type-button {
+  height: calc($ui-step * 9);
+  width: calc($ui-step * 9);
+  padding: calc($ui-step * 5);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    @include focus-primary;
+  }
+
+  &.customs_clearance {
+    position: absolute;
+    background: url('../../../../shared/icons/mini_customs_clearance.svg') no-repeat center center
+      $ui-color-warning-secondary;
+
+    &.selected {
+      border: 2px solid $ui-color-warning-main;
+      z-index: $ui-index-1;
+      padding: calc($ui-step * 4.5);
+    }
+  }
+  &.customs_inspection {
+    position: absolute;
+    background: url('../../../../shared/icons/mini_customs_inspection.svg') no-repeat center center
+      $ui-color-danger-secondary;
+
+    &.selected {
+      border: 2px solid $ui-color-danger-main;
+      z-index: $ui-index-1;
+      padding: calc($ui-step * 4.5);
+    }
+  }
+  &.customs_registration {
+    position: absolute;
+    background: url('../../../../shared/icons/mini_customs_registration.svg') no-repeat center
+      center $ui-color-info-secondary;
+
+    &.selected {
+      border: 2px solid $ui-color-info-main;
+      z-index: $ui-index-1;
+      padding: calc($ui-step * 4.5);
+    }
+  }
+  &.loading {
+    position: absolute;
+    background: url('../../../../shared/icons/truck-primary.svg') no-repeat center center
+      $ui-color-primary-secondary;
+
+    &.selected {
+      border: 2px solid $ui-color-primary-main;
+      z-index: $ui-index-1;
+      padding: calc($ui-step * 4.5);
+    }
+  }
+  &.unloading {
+    position: absolute;
+    background: url('../../../../shared/icons/truck-primary.svg') no-repeat center center
+      $ui-color-primary-secondary;
+
+    &.selected {
+      border: 2px solid $ui-color-primary-main;
+      z-index: $ui-index-1;
+      padding: calc($ui-step * 4.5);
+    }
+  }
+  &.waypoint {
+    position: absolute;
+    background: url('../../../../shared/icons/mini_waypoint-success.svg') no-repeat center center
+      $ui-color-success-secondary;
+
+    &.selected {
+      border: 2px solid $ui-color-success-main;
+      z-index: $ui-index-1;
+      padding: calc($ui-step * 4.5);
+    }
+  }
+
+  &.btn0 {
+    left: 0;
+  }
+  &.btn1 {
+    left: 35px;
+  }
+  &.btn2 {
+    left: 70px;
+  }
+  &.btn3 {
+    left: 105px;
+  }
+  &.btn4 {
+    left: 140px;
+  }
+  &.btn5 {
+    left: 175px;
+  }
+  &.btn6 {
+    left: 210px;
+  }
+  &.btn7 {
+    left: 245px;
+  }
+}

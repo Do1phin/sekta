@@ -5,7 +5,9 @@ import css from './SocialAuth.module.scss';
 import { Button } from '../../../../shared/ui';
 
 const SocialAuth: FC = (props) => {
+  // @ts-ignore
   const { action } = props;
+
   const { t } = useTranslation();
 
   const mockAuth = () => null;
@@ -13,7 +15,7 @@ const SocialAuth: FC = (props) => {
   return (
     <div className={css['social-register']}>
       <Button
-        className={css.facebook}
+        classes={css.facebook}
         disabled={true}
         text={
           action === 'login'
@@ -23,7 +25,7 @@ const SocialAuth: FC = (props) => {
         onClick={mockAuth}
       />
       <Button
-        className={css.google}
+        classes={css.google}
         disabled={true}
         text={
           action === 'login'
@@ -33,7 +35,7 @@ const SocialAuth: FC = (props) => {
         onClick={mockAuth}
       />
       <Button
-        className={css.twitter}
+        classes={css.twitter}
         disabled={true}
         text={
           action === 'login'
@@ -43,7 +45,7 @@ const SocialAuth: FC = (props) => {
         onClick={mockAuth}
       />
       <Button
-        className={css.linkedin}
+        classes={css.linkedin}
         disabled={true}
         text={
           action === 'login'

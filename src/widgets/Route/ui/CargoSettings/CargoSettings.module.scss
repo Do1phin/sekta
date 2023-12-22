@@ -1,0 +1,72 @@
+@import 'src/shared/styles/variables';
+@import 'src/shared/styles/colors';
+
+.cargo-settings-wrapper {
+  flex: 300px 0 0;
+  gap: calc($ui-step * 3);
+  justify-content: space-between;
+  position: relative;
+
+  .title {
+    @include FontPrimaryMedium;
+    font-size: 16px;
+    color: $ui-color-gray-900;
+  }
+
+  .inputs {
+    display: flex;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    margin-bottom: calc($ui-step * 4);
+    padding-bottom: calc($ui-step * 2.5);
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 120%;
+      height: 1px;
+      background-color: $ui-color-gray-400;
+      bottom: 0;
+      left: -20px;
+    }
+  }
+  .header.hide {
+    display: none;
+  }
+  .content {
+    display: flex;
+    gap: calc($ui-step * 5);
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+  }
+  .step img {
+    height: 70px;
+    width: auto;
+  }
+  .step.inactive img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+  }
+
+  .arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    height: 26px;
+    width: 26px;
+  }
+
+  .step-buttons {
+    display: flex;
+    gap: calc($ui-step * 3);
+  }
+}

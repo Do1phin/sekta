@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
 
-import { AuthPage, MainPage } from '../../pages';
+import { AuthPage, CreateRoutePage, MainPage } from '../../pages';
 import { HomeLayout, ProtectedLayout } from '../ui/layouts';
 
 const router = createBrowserRouter(
@@ -15,6 +15,7 @@ const router = createBrowserRouter(
 
       <Route element={<ProtectedLayout roles={['user']} />}>
         <Route path='dashboard' element={<p>Dashboard (private)</p>} />
+        <Route path='create-route' element={<CreateRoutePage />} />
       </Route>
 
       <Route path='*' element={<p>Theres nothing here: 404!</p>} />

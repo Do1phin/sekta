@@ -93,6 +93,7 @@ const AuthLayout: FC<IAuthProps> = (props) => {
       {isWrongAuth && (
         <WrongAuth
           action={action}
+          // @ts-ignore
           errorMessage={signUpError?.response?.data.message ?? signInError?.response?.data.message}
         />
       )}
@@ -112,6 +113,7 @@ const AuthLayout: FC<IAuthProps> = (props) => {
               <Button
                 className={css['auth-btn']}
                 text={action === 'login' ? t('page.auth.go-login') : t('page.auth.go-register')}
+                // @ts-ignore
                 onClick={action === 'login' ? login : registration}
                 loader={signUpIsLoading || signInIsLoading}
               />

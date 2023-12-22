@@ -3,7 +3,11 @@ import { useTranslation } from 'react-i18next';
 
 import { Input } from '../../../../shared/ui';
 
-const Password: FC = (props) => {
+interface IPasswordProps {
+  password: any;
+}
+
+const Password: FC<IPasswordProps> = (props) => {
   const { password } = props;
 
   const { t } = useTranslation();
@@ -30,6 +34,7 @@ const Password: FC = (props) => {
           password.maxLengthError &&
           t('validate.error.max-length-input', { value: 40 }))
       }
+      // @ts-ignore
       style={createStyle()}
       type={'password'}
     />

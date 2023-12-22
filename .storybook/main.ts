@@ -4,6 +4,7 @@ const config = {
     '@storybook/addon-actions',
     '@storybook/addon-backgrounds',
     '@storybook/addon-controls',
+    '@storybook/addon-designs',
     '@storybook/addon-docs',
     '@storybook/addon-links',
     '@storybook/addon-measure',

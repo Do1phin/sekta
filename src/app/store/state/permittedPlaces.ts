@@ -1,0 +1,35 @@
+import { OSMPlaces, PermittedPlaces } from '../../../features/find-address/api/types';
+
+const permittedPlaces: PermittedPlaces = {
+  [OSMPlaces.Allotments]: true,
+  [OSMPlaces.Archipelago]: true,
+  [OSMPlaces.Borough]: true,
+  [OSMPlaces.City]: true,
+  [OSMPlaces.CityBlock]: true,
+  [OSMPlaces.Continent]: true,
+  [OSMPlaces.Country]: true,
+  [OSMPlaces.County]: true,
+  [OSMPlaces.District]: true,
+  [OSMPlaces.Farm]: true,
+  [OSMPlaces.Hamlet]: true,
+  [OSMPlaces.Island]: true,
+  [OSMPlaces.Islet]: true,
+  [OSMPlaces.IsolatedDwelling]: true,
+  [OSMPlaces.Locality]: true,
+  [OSMPlaces.Municipality]: true,
+  [OSMPlaces.Neighbourhood]: true,
+  [OSMPlaces.Ocean]: true,
+  [OSMPlaces.Plot]: true,
+  [OSMPlaces.Polder]: true,
+  [OSMPlaces.Province]: true,
+  [OSMPlaces.Quarter]: true,
+  [OSMPlaces.Region]: true,
+  [OSMPlaces.Sea]: true,
+  [OSMPlaces.Square]: true,
+  [OSMPlaces.State]: true,
+  [OSMPlaces.Suburb]: true,
+  [OSMPlaces.Town]: true,
+  [OSMPlaces.Village]: true,
+};
+
+export { permittedPlaces };

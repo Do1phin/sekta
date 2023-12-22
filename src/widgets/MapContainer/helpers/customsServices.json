@@ -1,0 +1,963 @@
+{
+  "type": "FeatureCollection",
+  "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 190406716,
+        "osm_type": "node",
+        "osm_id": 1434150469,
+        "place_rank": 30,
+        "category": "railway",
+        "type": "station",
+        "importance": 0.29190327427879,
+        "addresstype": "railway",
+        "name": "Ягодин",
+        "display_name": "Ягодин, М-07, Римачі, Вишнівська сільська громада, Ковельський район, Волинська область, 44350, Україна",
+        "address": {
+          "railway": "Ягодин",
+          "road": "М-07",
+          "village": "Римачі",
+          "municipality": "Вишнівська сільська громада",
+          "district": "Ковельський район",
+          "state": "Волинська область",
+          "ISO3166-2-lvl4": "UA-07",
+          "postcode": "44350",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "uic_ref": "2218518",
+          "esr:user": "351306",
+          "wikidata": "Q16724087",
+          "public_transport": "station"
+        },
+        "namedetails": {
+          "name": "Ягодин",
+          "name:pl": "Jagodzin",
+          "name:ru": "Ягодин",
+          "name:uk": "Ягодин"
+        }
+      },
+      "bbox": [23.8908733, 51.1932044, 23.9008733, 51.2032044],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [23.8958733, 51.1982044]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 191205958,
+        "osm_type": "node",
+        "osm_id": 4295225809,
+        "place_rank": 25,
+        "category": "place",
+        "type": "locality",
+        "importance": 0.12500999999999995,
+        "addresstype": "locality",
+        "name": "Ягодин",
+        "display_name": "Ягодин, Любомльська міська громада, Ковельський район, Волинська область, 44350, Україна",
+        "address": {
+          "locality": "Ягодин",
+          "municipality": "Любомльська міська громада",
+          "district": "Ковельський район",
+          "state": "Волинська область",
+          "ISO3166-2-lvl4": "UA-07",
+          "postcode": "44350",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": null,
+        "namedetails": {
+          "name": "Ягодин",
+          "name:pl": "Jagodzin",
+          "name:ru": "Ягодин",
+          "name:uk": "Ягодин"
+        }
+      },
+      "bbox": [23.9023077, 51.1967511, 23.9223077, 51.2167511],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [23.9123077, 51.2067511]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 191246782,
+        "osm_type": "relation",
+        "osm_id": 7992890,
+        "place_rank": 18,
+        "category": "boundary",
+        "type": "administrative",
+        "importance": 0.4553222462708347,
+        "addresstype": "town",
+        "name": "Рава-Руська",
+        "display_name": "Рава-Руська, Рава-Руська міська громада, Львівський район, Львівська область, 80316, Україна",
+        "address": {
+          "town": "Рава-Руська",
+          "municipality": "Рава-Руська міська громада",
+          "district": "Львівський район",
+          "state": "Львівська область",
+          "ISO3166-2-lvl4": "UA-46",
+          "postcode": "80316",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "place": "town",
+          "koatuu": "4622710400",
+          "katotth": "UA46060390010035472",
+          "wikidata": "Q997343",
+          "wikipedia": "uk:Рава-Руська",
+          "population": "8328",
+          "name:prefix": "місто",
+          "linked_place": "town",
+          "wikipedia:ru": "Рава-Русская"
+        },
+        "namedetails": {
+          "name": "Рава-Руська",
+          "name:cs": "Rava-Ruska",
+          "name:de": "Rawa-Ruska",
+          "name:pl": "Rawa Ruska",
+          "name:ru": "Рава-Русская",
+          "name:uk": "Рава-Руська",
+          "name:en": "Rava-Ruska",
+          "name:fr": "Rava-Rouska",
+          "name:hr": "Rava-Ruska",
+          "name:it": "Rava-Rus'ka",
+          "name:ko": "라바루스카",
+          "alt_name:fr": "Rawa Ruska"
+        }
+      },
+      "bbox": [23.582954, 50.2156741, 23.6542429, 50.2453756],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [23.6240014, 50.230654]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 202307223,
+        "osm_type": "relation",
+        "osm_id": 3308250,
+        "place_rank": 18,
+        "category": "place",
+        "type": "town",
+        "importance": 0.40858356362112863,
+        "addresstype": "town",
+        "name": "Устилуг",
+        "display_name": "Устилуг, Устилузька міська громада, Володимирський район, Волинська область, 44731, Україна",
+        "address": {
+          "town": "Устилуг",
+          "municipality": "Устилузька міська громада",
+          "district": "Володимирський район",
+          "state": "Волинська область",
+          "ISO3166-2-lvl4": "UA-07",
+          "postcode": "44731",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "koatuu": "0720510400",
+          "katotth": "UA07020210010031545",
+          "wikidata": "Q147292",
+          "wikipedia": "uk:Устилуг",
+          "population": "2205",
+          "name:prefix": "місто",
+          "linked_place": "town"
+        },
+        "namedetails": {
+          "name": "Устилуг",
+          "name:de": "Ustyluh",
+          "name:en": "Ustyluh",
+          "name:pl": "Uściług",
+          "name:ru": "Устилуг",
+          "name:uk": "Устилуг",
+          "name:fr": "Ustyluh",
+          "name:hr": "Ustiluh",
+          "name:it": "Ustyluh",
+          "name:ko": "우스틸루흐"
+        }
+      },
+      "bbox": [24.1220678, 50.839116, 24.1874354, 50.8800144],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.1505139, 50.8622192]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 200999206,
+        "osm_type": "relation",
+        "osm_id": 4257608,
+        "place_rank": 18,
+        "category": "boundary",
+        "type": "administrative",
+        "importance": 0.41965742985298415,
+        "addresstype": "town",
+        "name": "Краковець",
+        "display_name": "Краковець, Яворівська міська громада, Яворівський район, Львівська область, 81033, Україна",
+        "address": {
+          "town": "Краковець",
+          "municipality": "Яворівська міська громада",
+          "district": "Яворівський район",
+          "state": "Львівська область",
+          "ISO3166-2-lvl4": "UA-46",
+          "postcode": "81033",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "place": "town",
+          "koatuu": "4625855600",
+          "katotth": "UA46140110020048621",
+          "landuse": "residential",
+          "wikidata": "Q1026933",
+          "wikipedia": "uk:Краковець",
+          "population": "1106",
+          "name:prefix": "селище міського типу",
+          "linked_place": "town",
+          "wikipedia:ru": "Краковец"
+        },
+        "namedetails": {
+          "name": "Краковець",
+          "name:cs": "Krakovec",
+          "name:de": "Krakowitz",
+          "name:en": "Krakovets",
+          "name:pl": "Krakowiec",
+          "name:ru": "Краковец",
+          "name:uk": "Краковець",
+          "alt_name": "Krakowiec",
+          "name:fr": "Krakovets",
+          "name:hr": "Krakovec",
+          "name:ko": "크라코베츠"
+        }
+      },
+      "bbox": [23.1428101, 49.9510281, 23.1726508, 49.968558],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [23.1603219, 49.962085]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 202700843,
+        "osm_type": "node",
+        "osm_id": 337544543,
+        "place_rank": 19,
+        "category": "place",
+        "type": "village",
+        "importance": 0.35335957931651085,
+        "addresstype": "village",
+        "name": "Шегині",
+        "display_name": "Шегині, Шегинівська сільська громада, Яворівський район, Львівська область, 81321, Україна",
+        "address": {
+          "village": "Шегині",
+          "municipality": "Шегинівська сільська громада",
+          "district": "Яворівський район",
+          "state": "Львівська область",
+          "ISO3166-2-lvl4": "UA-46",
+          "postcode": "81321",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "koatuu": "4622487901",
+          "katotth": "UA46140090010034963",
+          "wikidata": "Q2042090",
+          "wikipedia": "uk:Шегині",
+          "population": "1100",
+          "name:prefix": "село",
+          "wikipedia:ru": "Шегини"
+        },
+        "namedetails": {
+          "name": "Шегині",
+          "name:de": "Schehyni",
+          "name:en": "Shehyni",
+          "name:ko": "셰흐니",
+          "name:pl": "Szeginie",
+          "name:ru": "Шегини",
+          "name:uk": "Шегині",
+          "old_name:pl": "Szechynie"
+        }
+      },
+      "bbox": [22.954361, 49.781323, 22.994361, 49.821323],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [22.974361, 49.801323]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 200677145,
+        "osm_type": "way",
+        "osm_id": 411060872,
+        "place_rank": 22,
+        "category": "landuse",
+        "type": "border_control",
+        "importance": 0.2000099999999999,
+        "addresstype": "border_control",
+        "name": "Шегині",
+        "display_name": "Шегині, Шегинівська сільська громада, Яворівський район, Львівська область, Україна",
+        "address": {
+          "landuse": "Шегині",
+          "municipality": "Шегинівська сільська громада",
+          "district": "Яворівський район",
+          "state": "Львівська область",
+          "ISO3166-2-lvl4": "UA-46",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": null,
+        "namedetails": {
+          "ref": "460800",
+          "name": "Шегині",
+          "name:en": "Shehyni",
+          "name:pl": "Szeginie",
+          "name:uk": "Шегині"
+        }
+      },
+      "bbox": [22.9472454, 49.7982409, 22.9529428, 49.8009236],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [22.95039279977133, 49.79944055]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 201494425,
+        "osm_type": "way",
+        "osm_id": 30700945,
+        "place_rank": 18,
+        "category": "place",
+        "type": "town",
+        "importance": 0.4265984015254268,
+        "addresstype": "town",
+        "name": "Нижанковичі",
+        "display_name": "Нижанковичі, Добромильська міська громада, Самбірський район, Львівська область, 82011, Україна",
+        "address": {
+          "town": "Нижанковичі",
+          "municipality": "Добромильська міська громада",
+          "district": "Самбірський район",
+          "state": "Львівська область",
+          "ISO3166-2-lvl4": "UA-46",
+          "postcode": "82011",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "koatuu": "4625155400",
+          "katotth": "UA46080050020013973",
+          "wikidata": "Q1020050",
+          "wikipedia": "uk:Нижанковичі",
+          "population": "1824",
+          "name:prefix": "селище міського типу",
+          "linked_place": "town",
+          "population:date": "01.01.2011"
+        },
+        "namedetails": {
+          "name": "Нижанковичі",
+          "name:de": "Nyschankowytschi",
+          "name:en": "Nyzhankovychi",
+          "name:fr": "Nyjankovytchi",
+          "name:hy": "Նիժանկովիչի",
+          "name:it": "Nyžankovyči",
+          "name:pl": "Niżankowice",
+          "name:ro": "Nîjankovîci",
+          "name:ru": "Нижанковичи",
+          "name:uk": "Нижанковичі",
+          "name:zh": "尼然科维奇",
+          "name:crh": "Nıjankovıçi",
+          "old_name": "Nizhankovichi",
+          "old_name:pl": "Krasnopol",
+          "old_name:uk": "Краснопіль",
+          "name:hr": "Nižankoviči",
+          "name:ko": "니잔코비치",
+          "_place_old_name": "Nižankoviči;Nishankowitschi;Nizhankovichi"
+        }
+      },
+      "bbox": [22.7888667, 49.6659642, 22.8210045, 49.6924345],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [22.8079515, 49.6759019]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 204579094,
+        "osm_type": "way",
+        "osm_id": 399300213,
+        "place_rank": 22,
+        "category": "landuse",
+        "type": "commercial",
+        "importance": 0.2000099999999999,
+        "addresstype": "commercial",
+        "name": "Чоп (Тиса) - міжнародний пункт пропуску та контролю через державний кордон України",
+        "display_name": "Чоп (Тиса) - міжнародний пункт пропуску та контролю через державний кордон України, Соломоново, Чопська міська громада, Ужгородський район, Закарпатська область, 89460, Україна",
+        "address": {
+          "commercial": "Чоп (Тиса) - міжнародний пункт пропуску та контролю через державний кордон України",
+          "village": "Соломоново",
+          "municipality": "Чопська міська громада",
+          "district": "Ужгородський район",
+          "state": "Закарпатська область",
+          "ISO3166-2-lvl4": "UA-21",
+          "postcode": "89460",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "website": "https://dpsu.gov.ua/en/map/",
+          "wikipedia": "uk:Пункт пропуску для автомобільного сполучення «Чоп (Тиса)»",
+          "government": "customs",
+          "description": "Міжнародний автомобільний пасажирський, вантажний",
+          "description:en": "International automobile passenger, cargo"
+        },
+        "namedetails": {
+          "ref": "210700",
+          "name": "Чоп (Тиса) - міжнародний пункт пропуску та контролю через державний кордон України",
+          "name:en": "Chop (Tysa) - international border crossing Ukraine",
+          "name:hu": "Csap (Tisza) Határátkelőhely, Magyarország",
+          "name:uk": "Чоп (Тиса) - міжнародний пункт пропуску та контролю через державний кордон України"
+        }
+      },
+      "bbox": [22.1673993, 48.4164782, 22.1724834, 48.4189179],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [22.16991649963093, 48.417736]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 84982193,
+        "osm_type": "way",
+        "osm_id": 1124633015,
+        "place_rank": 30,
+        "category": "office",
+        "type": "government",
+        "importance": 0.3307179767809985,
+        "addresstype": "office",
+        "name": "Пункт пропуску \"Порубне\"",
+        "display_name": "Пункт пропуску \"Порубне\", М-19, Тереблеченська сільська громада, Чернівецький район, Чернівецька область, 60436, Україна",
+        "address": {
+          "office": "Пункт пропуску \"Порубне\"",
+          "road": "М-19",
+          "municipality": "Тереблеченська сільська громада",
+          "district": "Чернівецький район",
+          "state": "Чернівецька область",
+          "ISO3166-2-lvl4": "UA-77",
+          "postcode": "60436",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "building": "office",
+          "wikidata": "Q12142574",
+          "wikipedia": "uk:Порубне",
+          "government": "border_control"
+        },
+        "namedetails": {
+          "name": "Пункт пропуску \"Порубне\"",
+          "name:uk": "Пункт пропуску \"Порубне\""
+        }
+      },
+      "bbox": [26.0596082, 47.988562, 26.0604595, 47.9893642],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [26.060033884225163, 47.98891115]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 84657619,
+        "osm_type": "node",
+        "osm_id": 337696312,
+        "place_rank": 19,
+        "category": "place",
+        "type": "village",
+        "importance": 0.29081240687427556,
+        "addresstype": "village",
+        "name": "Орлівка",
+        "display_name": "Орлівка, Ренійська міська громада, Ізмаїльський район, Одеська область, 68831, Україна",
+        "address": {
+          "village": "Орлівка",
+          "municipality": "Ренійська міська громада",
+          "district": "Ізмаїльський район",
+          "state": "Одеська область",
+          "ISO3166-2-lvl4": "UA-51",
+          "postcode": "68831",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "koatuu": "5124183601",
+          "katotth": "UA51080070070079164",
+          "wikidata": "Q2667556",
+          "wikipedia": "uk:Орлівка (Ізмаїльський район)",
+          "population": "3047",
+          "name:prefix": "село"
+        },
+        "namedetails": {
+          "name": "Орлівка",
+          "name:bg": "Картал",
+          "name:de": "Orliwka",
+          "name:en": "Orlivka",
+          "name:ko": "오를리우카",
+          "name:ro": "Cartal",
+          "name:ru": "Орловка",
+          "name:uk": "Орлівка",
+          "alt_name": "Картал",
+          "alt_name:ko": "카르탈"
+        }
+      },
+      "bbox": [28.42556, 45.301632, 28.46556, 45.341632],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.44556, 45.321632]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 201799868,
+        "osm_type": "relation",
+        "osm_id": 12366150,
+        "place_rank": 18,
+        "category": "boundary",
+        "type": "administrative",
+        "importance": 0.33353273073045764,
+        "addresstype": "village",
+        "name": "Неветленфолу",
+        "display_name": "Неветленфолу, Пийтерфолвівська сільська громада, Берегівський район, Закарпатська область, 90365, Україна",
+        "address": {
+          "village": "Неветленфолу",
+          "municipality": "Пийтерфолвівська сільська громада",
+          "district": "Берегівський район",
+          "state": "Закарпатська область",
+          "ISO3166-2-lvl4": "UA-21",
+          "postcode": "90365",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "place": "village",
+          "koatuu": "2121282401",
+          "katotth": "UA21020190070097003",
+          "wikidata": "Q722488",
+          "wikipedia": "uk:Неветленфолу",
+          "population": "1632",
+          "name:prefix": "село",
+          "linked_place": "village",
+          "source:boundary": "cadastre"
+        },
+        "namedetails": {
+          "name": "Неветленфолу",
+          "name:en": "Nevetlenfolu",
+          "name:hu": "Nevetlenfalu",
+          "name:ru": "Неветленфолу",
+          "name:uk": "Неветленфолу",
+          "old_name": "Дякове",
+          "name:ko": "네베틀렌폴루"
+        }
+      },
+      "bbox": [22.9834578, 47.9955703, 23.0146408, 48.0267583],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [23.001793, 48.010944]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 204759067,
+        "osm_type": "node",
+        "osm_id": 288349690,
+        "place_rank": 19,
+        "category": "place",
+        "type": "village",
+        "importance": 0.3481598362912266,
+        "addresstype": "village",
+        "name": "Мамалига",
+        "display_name": "Мамалига, Мамалигівська сільська громада, Дністровський район, Чернівецька область, 60364, Україна",
+        "address": {
+          "village": "Мамалига",
+          "municipality": "Мамалигівська сільська громада",
+          "district": "Дністровський район",
+          "state": "Чернівецька область",
+          "ISO3166-2-lvl4": "UA-77",
+          "postcode": "60364",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "ele": "115",
+          "koatuu": "7323084301",
+          "katotth": "UA73040090010045589",
+          "wikidata": "Q2091648",
+          "wikipedia": "uk:Мамалига (село)",
+          "population": "2589",
+          "name:prefix": "село"
+        },
+        "namedetails": {
+          "name": "Мамалига",
+          "name:de": "Mamalyha",
+          "name:en": "Mamalyha",
+          "name:ko": "마말리하",
+          "name:md": "Мэмэлига",
+          "name:pl": "Mamałyga",
+          "name:ro": "Mămăliga",
+          "name:ru": "Мамалыга",
+          "name:uk": "Мамалига",
+          "name:uz": "Mamaliha"
+        }
+      },
+      "bbox": [26.566563, 48.2350528, 26.606563, 48.2750528],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [26.586563, 48.2550528]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 84463781,
+        "osm_type": "node",
+        "osm_id": 764136553,
+        "place_rank": 19,
+        "category": "place",
+        "type": "village",
+        "importance": 0.3224057754348258,
+        "addresstype": "village",
+        "name": "Старокозаче",
+        "display_name": "Старокозаче, Старокозацька сільська громада, Білгород-Дністровський район, Одеська область, 67730, Україна",
+        "address": {
+          "village": "Старокозаче",
+          "municipality": "Старокозацька сільська громада",
+          "district": "Білгород-Дністровський район",
+          "state": "Одеська область",
+          "ISO3166-2-lvl4": "UA-51",
+          "postcode": "67730",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "koatuu": "5120886801",
+          "katotth": "UA51040230010038726",
+          "wikidata": "Q4440406",
+          "wikipedia": "uk:Старокозаче",
+          "population": "5278",
+          "name:prefix": "село"
+        },
+        "namedetails": {
+          "name": "Старокозаче",
+          "name:de": "Starokosatsche",
+          "name:en": "Starokozache",
+          "name:ko": "스타로코자체",
+          "name:ro": "Cazaci",
+          "name:ru": "Староказачье",
+          "name:uk": "Старокозаче"
+        }
+      },
+      "bbox": [29.966652, 46.317597, 30.006652, 46.357597],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.986652, 46.337597]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 202110324,
+        "osm_type": "relation",
+        "osm_id": 3099384,
+        "place_rank": 18,
+        "category": "place",
+        "type": "town",
+        "importance": 0.4748938141207781,
+        "addresstype": "town",
+        "name": "Могилів-Подільський",
+        "display_name": "Могилів-Подільський, Могилів-Подільська міська громада, Могилів-Подільський район, Вінницька область, 24000, Україна",
+        "address": {
+          "town": "Могилів-Подільський",
+          "municipality": "Могилів-Подільська міська громада",
+          "district": "Могилів-Подільський район",
+          "state": "Вінницька область",
+          "ISO3166-2-lvl4": "UA-05",
+          "postcode": "24000",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "koatuu": "0510400000",
+          "katotth": "UA05080050010069812",
+          "wikidata": "Q997469",
+          "wikipedia": "uk:Могилів-Подільський",
+          "population": "32099",
+          "name:prefix": "місто",
+          "linked_place": "town"
+        },
+        "namedetails": {
+          "name": "Могилів-Подільський",
+          "name:be": "Магілёў-Падольскі",
+          "name:de": "Mohyliw-Podilskyj",
+          "name:en": "Mohyliv-Podilskyi",
+          "name:eo": "Mogiliv-Podilskij",
+          "name:hu": "Mohyliv-Podilskyi",
+          "name:pl": "Mohylów Podolski",
+          "name:ro": "Moghilău",
+          "name:ru": "Могилёв-Подольский",
+          "name:uk": "Могилів-Подільський",
+          "name:cs": "Mohyliv-Podilskyj",
+          "name:hr": "Mohiliv-Podiljski",
+          "name:ko": "모힐리우포딜스키"
+        }
+      },
+      "bbox": [27.7640295, 48.416876, 27.8400327, 48.4751791],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [27.7991124, 48.442544]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 85764985,
+        "osm_type": "way",
+        "osm_id": 256424221,
+        "place_rank": 19,
+        "category": "place",
+        "type": "village",
+        "importance": 0.3343526860531794,
+        "addresstype": "village",
+        "name": "Виноградівка",
+        "display_name": "Виноградівка, Тарутинська селищна громада, Болградський район, Одеська область, 68550, Україна",
+        "address": {
+          "village": "Виноградівка",
+          "municipality": "Тарутинська селищна громада",
+          "district": "Болградський район",
+          "state": "Одеська область",
+          "ISO3166-2-lvl4": "UA-51",
+          "postcode": "68550",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "koatuu": "5124781001",
+          "katotth": "UA51060170040060489",
+          "landuse": "residential",
+          "wikidata": "Q587832",
+          "wikipedia": "uk:Виноградівка (Тарутинська селищна громада)",
+          "population": "1629",
+          "name:prefix": "село",
+          "linked_place": "village"
+        },
+        "namedetails": {
+          "name": "Виноградівка",
+          "name:bg": "Виноградовка",
+          "name:de": "Wynohradiwka",
+          "name:en": "Vynohradivka",
+          "name:ru": "Виноградовка",
+          "name:uk": "Виноградівка",
+          "name:zh": "維諾格拉季夫卡",
+          "old_name": "Vinogradovka",
+          "name:ko": "비노흐라디우카"
+        }
+      },
+      "bbox": [29.1069824, 46.0714319, 29.1332777, 46.0919236],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.1212751, 46.0805324]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 85764985,
+        "osm_type": "way",
+        "osm_id": 256424221,
+        "place_rank": 19,
+        "category": "place",
+        "type": "village",
+        "importance": 0.3343526860531794,
+        "addresstype": "village",
+        "name": "Виноградівка",
+        "display_name": "Виноградівка, Тарутинська селищна громада, Болградський район, Одеська область, 68550, Україна",
+        "address": {
+          "village": "Виноградівка",
+          "municipality": "Тарутинська селищна громада",
+          "district": "Болградський район",
+          "state": "Одеська область",
+          "ISO3166-2-lvl4": "UA-51",
+          "postcode": "68550",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "koatuu": "5124781001",
+          "katotth": "UA51060170040060489",
+          "landuse": "residential",
+          "wikidata": "Q587832",
+          "wikipedia": "uk:Виноградівка (Тарутинська селищна громада)",
+          "population": "1629",
+          "name:prefix": "село",
+          "linked_place": "village"
+        },
+        "namedetails": {
+          "name": "Виноградівка",
+          "name:bg": "Виноградовка",
+          "name:de": "Wynohradiwka",
+          "name:en": "Vynohradivka",
+          "name:ru": "Виноградовка",
+          "name:uk": "Виноградівка",
+          "name:zh": "維諾格拉季夫卡",
+          "old_name": "Vinogradovka",
+          "name:ko": "비노흐라디우카"
+        }
+      },
+      "bbox": [29.1069824, 46.0714319, 29.1332777, 46.0919236],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.1212751, 46.0805324]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 84151238,
+        "osm_type": "relation",
+        "osm_id": 7670972,
+        "place_rank": 18,
+        "category": "place",
+        "type": "town",
+        "importance": 0.4297384531473102,
+        "addresstype": "town",
+        "name": "Рені",
+        "display_name": "Рені, Ренійська міська громада, Ізмаїльський район, Одеська область, 68800-68809, Україна",
+        "address": {
+          "town": "Рені",
+          "municipality": "Ренійська міська громада",
+          "district": "Ізмаїльський район",
+          "state": "Одеська область",
+          "ISO3166-2-lvl4": "UA-51",
+          "postcode": "68800-68809",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "koatuu": "5124110100",
+          "katotth": "UA51080070010065897",
+          "wikidata": "Q890311",
+          "wikipedia": "uk:Рені",
+          "population": "19488",
+          "name:prefix": "місто",
+          "linked_place": "town"
+        },
+        "namedetails": {
+          "name": "Рені",
+          "name:de": "Reni",
+          "name:en": "Reni",
+          "name:ko": "레니",
+          "name:pl": "Reni",
+          "name:ro": "Reni",
+          "name:ru": "Рени",
+          "name:uk": "Рені",
+          "name:fr": "Reni",
+          "name:hr": "Reni"
+        }
+      },
+      "bbox": [28.2346133, 45.4106383, 28.316015, 45.4760318],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.2790948, 45.455413]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_id": 201620359,
+        "osm_type": "relation",
+        "osm_id": 2692232,
+        "place_rank": 18,
+        "category": "boundary",
+        "type": "administrative",
+        "importance": 0.5512982073700755,
+        "addresstype": "city",
+        "name": "Ужгород",
+        "display_name": "Ужгород, Ужгородська міська громада, Ужгородський район, Закарпатська область, Україна",
+        "address": {
+          "city": "Ужгород",
+          "municipality": "Ужгородська міська громада",
+          "district": "Ужгородський район",
+          "state": "Закарпатська область",
+          "ISO3166-2-lvl4": "UA-21",
+          "country": "Україна",
+          "country_code": "ua"
+        },
+        "extratags": {
+          "place": "city",
+          "koatuu": "2110100000",
+          "capital": "4",
+          "katotth": "UA21100230010016545",
+          "wikidata": "Q156711",
+          "wikipedia": "uk:Ужгород",
+          "population": "114867",
+          "name:prefix": "місто",
+          "linked_place": "city"
+        },
+        "namedetails": {
+          "name": "Ужгород",
+          "name:be": "Ужгарад",
+          "name:cs": "Užhorod",
+          "name:de": "Uschhorod",
+          "name:en": "Uzhhorod",
+          "name:eo": "Uĵhorodo",
+          "name:es": "Úzhgorod",
+          "name:et": "Užgorod",
+          "name:fr": "Oujhorod",
+          "name:hr": "Užhorod",
+          "name:hu": "Ungvár",
+          "name:it": "Užhorod",
+          "name:ko": "우즈호로드",
+          "name:la": "Uzhorodum",
+          "name:nl": "Oezjhorod",
+          "name:pl": "Użhorod",
+          "name:pt": "Uzhhorod",
+          "name:ro": "Ujhorod",
+          "name:ru": "Ужгород",
+          "name:sk": "Užhorod",
+          "name:sr": "Ужгород",
+          "name:sv": "Uzjhorod",
+          "name:uk": "Ужгород",
+          "name:zh": "乌日格罗德",
+          "alt_name:de": "Ungwar",
+          "alt_name:hr": "Užgorod",
+          "alt_name:ko": "우즈고로드",
+          "old_name:ko": "운그바르",
+          "name:he": "אוז'הורוד",
+          "name:ku": "Ujhorod",
+          "name:mk": "Ужхород",
+          "name:ml": "ഉജ്ഹൊരൊദ്",
+          "_place_name:zh": "乌日霍罗德",
+          "name:ckb": "ئوژھۆرۆد",
+          "name:zh-Hans": "乌日霍罗德",
+          "name:zh-Hant": "烏日霍羅德"
+        }
+      },
+      "bbox": [22.2097741, 48.576325, 22.3419136, 48.661549],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [22.3022572, 48.6223731]
+      }
+    }
+  ]
+}

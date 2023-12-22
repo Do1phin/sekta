@@ -1,0 +1,39 @@
+@import 'src/shared/styles/variables';
+
+.contacts-wrapper {
+  width: calc($ui-step * 90);
+  padding: calc($ui-step * 3);
+  margin-left: auto;
+  border-radius: calc($ui-step * 2);
+  border: 1px solid $ui-color-gray-300;
+
+  .person {
+    display: flex;
+    align-items: center;
+    gap: calc($ui-step * 2);
+    background-color: #f7f7f7;
+    padding: calc($ui-step * 1.5);
+    border-radius: calc($ui-step * 2);
+  }
+
+  .avatar {
+    overflow: hidden;
+    border-radius: 50%;
+    height: calc($ui-step * 15);
+    width: calc($ui-step * 15);
+    flex: 60px 0 0;
+    background: url('../../../../shared/images/person-60.jpg') no-repeat center center;
+  }
+
+  .names {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .buttons {
+    display: flex;
+    gap: $ui-step;
+    flex: 80px 0 0;
+  }
+}

@@ -13,6 +13,10 @@
     font-size: $ui-fontsize-large;
   }
 
+  &.with-icon > .field > input {
+    padding: calc($ui-step * 1.5) calc($ui-step * 7) calc($ui-step * 1.5) calc($ui-step * 3);
+  }
+
   .field {
     align-content: flex-start;
     align-items: flex-start;
@@ -24,12 +28,15 @@
     & > input {
       border: $ui-border-base solid $ui-color-gray-400;
       border-radius: $ui-step;
+      background-color: $ui-base-color-white;
       color: $ui-color-gray-700;
       font-family: 'Primary Regular', sans-serif;
       font-size: $ui-fontsize-base;
-      padding: calc($ui-step * 1.5) calc($ui-step * 8) calc($ui-step * 1.5) calc($ui-step * 3);
+      padding: calc($ui-step * 1.5) calc($ui-step * 3) calc($ui-step * 1.5) calc($ui-step * 3);
       position: relative;
       width: 100%;
+
+      @include truncate;
     }
   }
 
@@ -120,5 +127,21 @@
     .helper {
       color: $ui-color-gray-400;
     }
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+
+  & > .label {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  & > .inputs {
+    display: flex;
+    gap: $ui-step;
   }
 }

@@ -4,6 +4,10 @@
 .radio {
   margin-bottom: 0.2em;
 
+  &:hover {
+    color: $ui-color-primary-hover;
+  }
+
   & > .field {
     opacity: 0;
     position: absolute;
@@ -13,6 +17,8 @@
     align-items: center;
     display: inline-flex;
     user-select: none;
+
+
   }
   & > .label::before {
     background-position: center center;
@@ -48,6 +54,9 @@
   & > .field:checked + .label::before {
     background: url('./../../icons/dot.svg') $ui-color-primary-main no-repeat center center;
     background-size: 50%;
+  }
+  & > .field:checked {
+    color: $ui-color-primary-main;
   }
   &.disabled > .field:checked + span::before {
     background-color: $ui-color-gray-500;

@@ -1,0 +1,22 @@
+@import 'src/shared/styles/colors';
+@import 'src/shared/styles/variables';
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  width: fit-content;
+  position: relative;
+
+  & .label {
+    @include FontPrimaryMedium;
+    font-size: 16px;
+    color: $ui-base-color-black;
+  }
+
+  & .change-type-btn {
+    display: inline-block;
+    position: absolute;
+    right: -($ui-step * 7);
+    bottom: -($ui-step);
+  }
+}

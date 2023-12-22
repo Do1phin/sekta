@@ -1,9 +1,20 @@
+import type { ExtendStyleTypes } from '../../types/componentTypes';
 import cx from 'classnames';
 import React, { FC } from 'react';
 
 import css from './Modal.module.scss';
-import { IModalProps } from './Modal.types';
 import { Button, Icon } from '../';
+
+interface IModalProps {
+  icon?: string;
+  isOpen?: boolean;
+  label: string;
+  message: string;
+  onCancelClick: () => void;
+  onCloseClick: () => void;
+  onOkClick: () => void;
+  style?: ExtendStyleTypes;
+}
 
 const Modal: FC<IModalProps> = (props) => {
   const {
@@ -18,7 +29,7 @@ const Modal: FC<IModalProps> = (props) => {
   } = props;
 
   return (
-    <div className={cx(css.modal, css[style], { [css.close]: !isOpen })}>
+    <div className={cx(css.modal, { [css.close]: !isOpen, [css.style]: style })}>
       {icon && (
         <div className={css.icon}>
           <Icon icon={icon} style={style} />
@@ -26,9 +37,15 @@ const Modal: FC<IModalProps> = (props) => {
       )}
       <div className={css.content}>
         <div className={css.header}>
-          <span className={css.label}>{label}</span>
+          <label className={css.label}>{label}</label>
           <div className={css['close-btn']}>
-            <Icon icon='x' onClick={onCloseClick} />
+            <Button
+              icon='x'
+              onClick={onCloseClick}
+              style={'basic'}
+              type={'default'}
+              size={'mega'}
+            />
           </div>
         </div>
         <span className={css.message}>{message}</span>

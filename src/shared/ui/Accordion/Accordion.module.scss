@@ -1,0 +1,101 @@
+@import 'src/shared/styles/variables';
+@import 'src/shared/styles/colors';
+
+.accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  min-height: 40px;
+}
+.accordion-item {
+  display: flex;
+  flex-direction: column;
+  //height: 0;
+  width: 100%;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+
+  &.open {
+    height: fit-content;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+  }
+
+  .item-label {
+    padding: 6px 12px;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    border-top: 1px solid $ui-color-gray-400;
+    border-bottom: 1px solid $ui-color-gray-400;
+    font-size: 16px;
+    @include FontPrimaryBold;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background: url('../../icons/chevron-down.svg');
+      top: 50%;
+      right: 8px;
+      width: 14px;
+      height: 8px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      fill: $ui-color-gray-700;
+    }
+
+    &.open {
+      //height: fit-content;
+      transition: width 2s, height 2s, background-color 2s, transform 2s;
+
+      &::after {
+        background: url('../../icons/chevron-up.svg');
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        width: 14px;
+        height: 8px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        fill: $ui-color-gray-700;
+      }
+    }
+
+    &:hover {
+      background-color: $ui-color-gray-200;
+    }
+  }
+
+  .item-content {
+    margin-top: calc($ui-step * 2);
+    //height: calc($ui-step * 30);
+    height: 0;
+    overflow: hidden;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+
+    &.preview {
+      height: 180px;
+    }
+    &.open {
+      height: fit-content;
+      transition: width 2s, height 2s, background-color 2s, transform 2s;
+    }
+  }
+
+  .item-collapse-btn-icon > svg {
+    fill: $ui-color-gray-700;
+    height: 14px;
+    width: 20px;
+  }
+}
+.item-collapse-btn {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+
+  &:hover {
+    color: $ui-color-primary-hover;
+  }
+}
+.item-collapse-btn:hover > .item-collapse-btn-icon svg {
+  fill: $ui-color-primary-hover;
+}

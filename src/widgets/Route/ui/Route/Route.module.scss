@@ -1,0 +1,26 @@
+@import '../../../../shared/styles/variables';
+
+.route {
+  display: flex;
+  gap: calc($ui-step * 4);
+  padding: calc($ui-step * 2);
+  background-color: $ui-color-primary-bg;
+  height: 100%;
+}
+
+.content {
+  //display: flex;
+  flex-direction: column;
+  //gap: calc($ui-step * 4);
+  width: 100%;
+  height: 100%;
+}
+.map {
+  width: 100%;
+  height: 100%;
+  gap: calc($ui-step * 4);
+  overflow: hidden;
+  position: relative;
+}
+
+

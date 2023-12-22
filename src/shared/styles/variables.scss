@@ -1,3 +1,5 @@
+@import 'colors';
+
 $ui-step: 4px;
 
 $ui-index-negative: -1;
@@ -7,6 +9,7 @@ $ui-index-3: 3;
 $ui-index-4: 4;
 $ui-index-5: 5;
 $ui-index-6: 6;
+$ui-index-above-map: 1001;
 
 $ui-radius: 4px;
 $ui-radius-100: 100px;
@@ -47,4 +50,53 @@ $ui-fontsize-mega: 20px;
 }
 @mixin h5 {
   font-size: 20px;
+}
+
+@mixin focus-primary {
+  outline: 3px solid $ui-color-primary-focus;
+  //background-color: $ui-color-primary-100;
+}
+@mixin focus-info {
+  outline: 3px solid $ui-color-info-focus;
+  //background-color: $ui-color-info-100;
+}
+@mixin focus-success {
+  outline: 3px solid $ui-color-success-focus;
+  //background-color: $ui-color-success-100;
+}
+@mixin focus-danger {
+  outline: 3px solid $ui-color-danger-focus;
+  //background-color: $ui-color-danger-100;
+}
+@mixin focus-warning {
+  outline: 3px solid $ui-color-warning-focus;
+  //background-color: $ui-color-warning-100;
+}
+
+@mixin truncate {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin FontPrimaryRegular {
+  font-family: 'Primary Regular', sans-serif;
+}
+@mixin FontPrimaryBold {
+  font-family: 'Primary Bold', sans-serif;
+}
+@mixin FontPrimaryItalic {
+  font-family: 'Primary Italic', sans-serif;
+}
+@mixin FontPrimaryMedium {
+  font-family: 'Primary Medium', sans-serif;
+}
+
+@mixin Shadow2 {
+  box-shadow: $ui-shadow-2;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+@mixin Shadow6 {
+  box-shadow: $ui-shadow-2;
+  border: 2px solid rgba(0, 0, 0, 0.2);
 }

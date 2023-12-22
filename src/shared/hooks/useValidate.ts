@@ -14,8 +14,8 @@ const useValidation = (value: string, validations: object) => {
   );
 
   useEffect(() => {
-    for (const rule in validations) {
-      switch (rule) {
+    for (const [key, rule] of Object.entries(validations)) {
+      switch (key) {
         case 'isEmpty':
           value.length ? setIsEmptyError(() => false) : setIsEmptyError(() => true);
           break;
@@ -25,12 +25,12 @@ const useValidation = (value: string, validations: object) => {
             : setIsEmailError(() => true);
           break;
         case 'maxLength':
-          value.length > +validations[rule]
+          value.length > Number(rule)
             ? setMaxLengthError(() => true)
             : setMaxLengthError(() => false);
           break;
         case 'minLength':
-          value.length < +validations[rule]
+          value.length < Number(rule)
             ? setMinLengthError(() => true)
             : setMinLengthError(() => false);
           break;

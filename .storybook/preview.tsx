@@ -3,6 +3,8 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { globalDecorators } from './decorators';
 import i18n from '../i18n';
 import { localeToolbar } from '../src/app/config/i18n';
+import '../src/shared/styles/normalize.scss';
+import '../src/shared/styles/reset.scss';
 
 export const globalTypes = {
   i18n,

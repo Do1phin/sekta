@@ -1,8 +1,8 @@
+import type { INotificationProps } from './Notification';
 import { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
 
 import { Notification } from './Notification';
-import { INotificationProps } from './Notification.types';
 
 const meta: Meta<typeof Notification> = {
   args: {

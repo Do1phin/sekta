@@ -1,0 +1,28 @@
+@import 'src/shared/styles/variables';
+
+.truck-step {
+  display: flex;
+  padding: calc($ui-step * 3);
+  border-radius: calc($ui-step * 2);
+  border: 1px solid $ui-color-gray-300;
+  //width: 100%;
+  flex: 1;
+
+  .image {
+    width: 200px;
+    height: auto;
+  }
+
+  & > .form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: calc($ui-step * 2.5);
+    align-items: center;
+  }
+
+  .step-buttons {
+    display: flex;
+    gap: calc($ui-step * 2);
+  }
+}

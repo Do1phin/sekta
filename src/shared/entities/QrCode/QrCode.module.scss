@@ -1,0 +1,25 @@
+@import 'src/shared/styles/variables';
+
+.code {
+  padding: $ui-step;
+  background-color: $ui-base-color-white;
+  border-radius: $ui-step;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  text-align: center;
+  color: $ui-base-color-white;
+  background-color: $ui-base-color-black;
+}
+.qr-codes-wrapper {
+  display: flex;
+  position: absolute;
+  top: calc($ui-step * 20);
+  right: calc($ui-step * 6.5);
+  flex-direction: column;
+  gap: calc($ui-step * 2);
+  padding: $ui-step;
+  background-color: $ui-base-color-black;
+  border-radius: $ui-step;
+}

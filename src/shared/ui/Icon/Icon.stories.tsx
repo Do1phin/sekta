@@ -10,6 +10,12 @@ const meta: Meta<typeof Icon> = {
     style: 'basic',
   },
   component: Icon,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/BlWGslXMm6orA9moN7cwlb/Sekta-UI-Kit-(Copy)?type=design&node-id=1043-1705&mode=design&t=xE44ChNIGeMwD1rz-4',
+    },
+  },
   title: 'UI-Kit/Icons',
 };
 export default meta;

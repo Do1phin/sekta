@@ -3,7 +3,11 @@ import { useTranslation } from 'react-i18next';
 
 import { Input } from '../../../../shared/ui';
 
-const Email: FC = (props) => {
+interface IEmailProps {
+  email: any;
+}
+
+const Email: FC<IEmailProps> = (props) => {
   const { email } = props;
 
   const { t } = useTranslation();
@@ -32,6 +36,7 @@ const Email: FC = (props) => {
           email.maxLengthError &&
           t('validate.error.max-length-input', { value: 40 }))
       }
+      // @ts-ignore
       style={createStyle()}
     />
   );
