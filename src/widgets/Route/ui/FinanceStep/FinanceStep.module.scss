@@ -1,0 +1,34 @@
+@import 'src/shared/styles/variables';
+
+.finance-step {
+  display: flex;
+  padding: calc($ui-step * 3);
+  animation: mymove 2s;
+  border-radius: calc($ui-step * 2);
+  border: 1px solid $ui-color-gray-300;
+  //width: 100%;
+  flex: 1;
+
+  @keyframes mymove {
+    from {width: 100%; right: -100%;}
+    to { width: 100%; left: 0; }
+  }
+
+  .image {
+    width: 200px;
+    height: auto;
+  }
+
+  & > .form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: calc($ui-step * 2.5);
+    align-items: center;
+  }
+
+  .step-buttons {
+    display: flex;
+    gap: calc($ui-step * 2);
+  }
+}

@@ -1,0 +1,37 @@
+@import '../../../../shared/styles/colors';
+@import '../../../../shared/styles/variables';
+
+.wrapper {
+  position: relative;
+  //height: 100%;
+}
+
+.map {
+  height: 100vh;
+  width: 100%;
+  //position: relative;
+  overflow: hidden;
+}
+
+#map {
+  height: 100%;
+  overflow: hidden;
+}
+
+.route-fetching {
+  background-color: $ui-color-danger-main;
+}
+.route-fetching-error {
+  background-color: $ui-color-danger-main;
+}
+.map-spinner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100, 100, 100, 0.5);
+
+  & > span {
+    top: 50%;
+    left: 50%;
+  }
+}

@@ -1,21 +1,25 @@
+import type { ExtendSizeTypes, ExtendStyleTypes } from '../../types/componentTypes';
 import cx from 'classnames';
 import React, { FC } from 'react';
 
 import css from './Icon.module.scss';
-import { IIconProps } from './Icon.types';
 import icons from '../../icons/icons.svg';
 
+interface IIconProps {
+  icon: string;
+  size?: ExtendSizeTypes;
+  style?: ExtendStyleTypes;
+}
+
 const Icon: FC<IIconProps> = (props) => {
-  const { style = '', icon = '', onClick, size = 'normal' } = props;
+  const { style = 'basic', icon = '' } = props;
 
   return (
-    <button
-      className={cx(css.icon, css[style], css[size], onClick && css.cursor)}
-      onClick={onClick}>
+    <div className={cx(css.icon, { [css[style]]: style })}>
       <svg>
         <use xlinkHref={`${icons}#${icon}`} />
       </svg>
-    </button>
+    </div>
   );
 };
 

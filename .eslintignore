@@ -10,4 +10,4 @@ src/shared/assets/
 **/*.woff
 **/*.woff2
 !.storybook
-
+/src/shared/styles/leaflet.scss

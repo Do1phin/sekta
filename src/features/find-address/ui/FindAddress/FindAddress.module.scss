@@ -1,0 +1,14 @@
+@import 'src/shared/styles/colors';
+@import 'src/shared/styles/variables';
+
+.search {
+  width: 100%;
+
+  & select {
+    height: calc($ui-step * 12.5);
+  }
+
+  .label {
+    font-size: 16px;
+  }
+}

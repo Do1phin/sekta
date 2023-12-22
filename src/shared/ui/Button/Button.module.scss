@@ -19,11 +19,18 @@
     radius: $ui-radius;
     color: transparent;
   }
+
   & svg {
-    fill: $ui-base-color-white;
+    fill: $ui-base-color-black;
     height: calc($ui-step * 4);
     width: calc($ui-step * 4);
   }
+  &:hover svg {
+    fill: $ui-color-primary-main;
+    height: calc($ui-step * 4);
+    width: calc($ui-step * 4);
+  }
+
   .loading {
     & svg {
       margin: 0 auto;
@@ -48,6 +55,12 @@
     &.large {
       font-size: $ui-fontsize-large;
     }
+    &.extra-large {
+      font-size: $ui-fontsize-extra-large;
+    }
+    &.mega {
+      font-size: $ui-fontsize-mega;
+    }
   }
   &.icon {
     padding: calc($ui-step * 1.5);
@@ -64,6 +77,14 @@
       height: calc($ui-step * 5);
       width: calc($ui-step * 5);
     }
+    &.extra-large svg {
+      height: calc($ui-step * 6);
+      width: calc($ui-step * 6);
+    }
+    &.mega svg {
+      height: calc($ui-step * 7);
+      width: calc($ui-step * 7);
+    }
   }
   &.icon-only {
     padding: calc($ui-step * 1.5);
@@ -79,6 +100,14 @@
     &.large svg {
       height: calc($ui-step * 5);
       width: calc($ui-step * 5);
+    }
+    &.extra-large svg {
+      height: calc($ui-step * 6);
+      width: calc($ui-step * 6);
+    }
+    &.mega svg {
+      height: calc($ui-step * 7);
+      width: calc($ui-step * 7);
     }
   }
 
@@ -108,8 +137,7 @@
       color: $ui-base-color-white;
     }
     &:focus {
-      border: $ui-border-focus solid $ui-color-primary-focus;
-      color: $ui-base-color-white;
+      @include focus-primary;
     }
   }
   &.secondary:not(:disabled) {
@@ -132,7 +160,7 @@
       }
     }
     &:focus {
-      border: $ui-border-focus solid $ui-color-primary-focus;
+      @include focus-primary;
       color: $ui-color-primary-main;
       & svg {
         fill: $ui-color-primary-main;
@@ -159,7 +187,7 @@
       }
     }
     &:focus {
-      border: $ui-border-focus solid $ui-color-primary-focus;
+      @include focus-primary;
       color: $ui-color-primary-main;
       & svg {
         fill: $ui-color-primary-main;
@@ -183,7 +211,7 @@
       color: $ui-base-color-white;
     }
     &:focus {
-      border: $ui-border-focus solid $ui-color-success-focus;
+      @include focus-success;
       color: $ui-base-color-white;
     }
   }
@@ -202,7 +230,7 @@
       color: $ui-color-success-hover;
     }
     &:focus {
-      border: $ui-border-focus solid $ui-color-success-focus;
+      @include focus-success;
       color: $ui-color-success-focus;
     }
   }
@@ -219,7 +247,7 @@
       color: $ui-color-success-hover;
     }
     &:focus {
-      border: $ui-border-focus solid $ui-color-success-focus;
+      @include focus-success;
       color: $ui-color-success-focus;
     }
   }
@@ -240,7 +268,7 @@
       color: $ui-base-color-white;
     }
     &:focus {
-      border: $ui-border-focus solid $ui-color-danger-focus;
+      @include focus-danger;
       color: $ui-base-color-white;
     }
   }
@@ -259,7 +287,7 @@
       color: $ui-color-danger-hover;
     }
     &:focus {
-      border: $ui-border-focus solid $ui-color-danger-focus;
+      @include focus-danger;
       color: $ui-color-danger-focus;
     }
   }
@@ -276,7 +304,7 @@
       color: $ui-color-danger-hover;
     }
     &:focus {
-      border: $ui-border-focus solid $ui-color-danger-focus;
+      @include focus-danger;
       color: $ui-color-danger-focus;
     }
   }
@@ -297,7 +325,7 @@
       color: $ui-base-color-white;
     }
     &:focus {
-      border: $ui-border-focus solid $ui-color-info-focus;
+      @include focus-info;
       color: $ui-base-color-white;
     }
   }
@@ -316,7 +344,7 @@
       color: $ui-color-info-hover;
     }
     &:focus {
-      border: $ui-border-focus solid $ui-color-info-focus;
+      @include focus-info;
       color: $ui-color-info-focus;
     }
   }
@@ -333,7 +361,7 @@
       color: $ui-color-info-hover;
     }
     &:focus {
-      border: $ui-border-focus solid $ui-color-info-focus;
+      @include focus-info;
       color: $ui-color-info-focus;
     }
   }
@@ -354,7 +382,7 @@
       color: $ui-base-color-white;
     }
     &:focus {
-      border: $ui-border-focus solid $ui-color-warning-focus;
+      @include focus-warning;
       color: $ui-base-color-white;
     }
   }
@@ -373,7 +401,7 @@
       color: $ui-color-warning-hover;
     }
     &:focus {
-      border: $ui-border-focus solid $ui-color-warning-focus;
+      @include focus-warning;
       color: $ui-color-warning-focus;
     }
   }
@@ -390,7 +418,7 @@
       color: $ui-color-warning-hover;
     }
     &:focus {
-      border: $ui-border-focus solid $ui-color-warning-focus;
+      @include focus-warning;
       color: $ui-color-warning-focus;
     }
   }

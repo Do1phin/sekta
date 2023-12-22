@@ -2,7 +2,14 @@ import cx from 'classnames';
 import React, { FC } from 'react';
 
 import css from './Text.module.scss';
-import { ITextProps } from './Text.types';
+import { ExtendStyleTypes } from '../../types/componentTypes';
+
+interface ITextProps {
+  children: string;
+  className?: string;
+  fontSize?: string;
+  style?: ExtendStyleTypes;
+}
 
 const Text: FC<ITextProps> = (props) => {
   const { children, className = '', fontSize = '14px', style = 'basic' } = props;

@@ -1,0 +1,16 @@
+@import '../../../../shared/styles/colors';
+@import '../../../../shared/styles/variables';
+
+.route-selector {
+  position: absolute;
+  display: flex;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 401;
+  background-color: $ui-base-color-white;
+  padding: $ui-step;
+  border-radius: $ui-step;
+  box-shadow: $ui-shadow-2;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}

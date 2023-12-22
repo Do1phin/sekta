@@ -1,0 +1,10 @@
+@import 'src/shared/styles/variables';
+
+.final-step {
+  flex: 1;
+
+  .buttons {
+    display: flex;
+    gap: calc($ui-step * 2);
+  }
+}

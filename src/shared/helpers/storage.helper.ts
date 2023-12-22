@@ -1,5 +1,5 @@
 export const storageHelper = (storage: 'session' | 'local') => {
-  const get = (key: string) => {
+  const get = (key: string): string | null | undefined => {
     if (storage === 'session') {
       return sessionStorage.getItem(key) ?? null;
     }

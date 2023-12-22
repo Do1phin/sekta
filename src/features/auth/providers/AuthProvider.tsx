@@ -1,9 +1,10 @@
+import type { IUser } from '../../../shared/types/authTypes';
 import React, { createContext, FC, PropsWithChildren, useContext, useMemo } from 'react';
 
 import { storageHelper } from '../../../shared/helpers';
-import { IUser } from '../../../shared/types/authTypes';
 
-const AuthContext = createContext();
+// @ts-ignore
+const AuthContext = createContext<Context<IUser>>();
 
 const useAuthContext = () => useContext(AuthContext);
 
@@ -11,6 +12,7 @@ const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
   const user = JSON.parse(storageHelper('local').get('user') || '{}');
 
   const login = async (data: IUser) => {
+    // @ts-ignore
     storageHelper('local').set('user', data);
   };
 

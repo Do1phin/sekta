@@ -1,8 +1,9 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as path from 'path';
-import SpeedMeasurePlugin from 'speed-measure-webpack-plugin';
 import type { Configuration } from 'webpack';
 import * as webpack from 'webpack';
+
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 
 const mode = process.env.NODE_ENV || 'none';
 const smp = new SpeedMeasurePlugin();

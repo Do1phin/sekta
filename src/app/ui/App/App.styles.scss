@@ -1,2 +1,12 @@
 @import 'src/shared/styles/normalize';
 @import 'src/shared/styles/reset';
+@import 'src/shared/styles/variables';
+@import 'src/shared/styles/scrollbar';
+
+* {
+  box-sizing: border-box;
+}
+body {
+  @include FontPrimaryRegular;
+  font-size: 14px;
+}

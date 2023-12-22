@@ -1,0 +1,9 @@
+@import 'src/shared/styles/colors';
+@import 'src/shared/styles/variables';
+
+.controls {
+  display: flex;
+  position: absolute;
+  right: 0;
+  transform: translateY(50%);
+}

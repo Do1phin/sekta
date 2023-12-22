@@ -2,8 +2,17 @@ import cx from 'classnames';
 import React, { FC } from 'react';
 
 import css from './Notification.module.scss';
-import { INotificationProps } from './Notification.types';
-import { Icon } from '../index';
+import { ExtendStyleTypes } from '../../types/componentTypes';
+import { Button, Icon } from '../index';
+
+interface INotificationProps {
+  icon?: string;
+  isOpen?: boolean;
+  label: string;
+  message: string;
+  onCloseClick: () => void;
+  style: ExtendStyleTypes;
+}
 
 const Notification: FC<INotificationProps> = (props) => {
   const { label, icon, isOpen = true, onCloseClick, message, style } = props;
@@ -17,9 +26,9 @@ const Notification: FC<INotificationProps> = (props) => {
       )}
       <div className={css.content}>
         <div className={css.header}>
-          <span className={css.label}>{label}</span>
+          <label className={css.label}>{label}</label>
           <div className={css['close-btn']}>
-            <Icon icon='x' onClick={onCloseClick} />
+            <Button icon='x' onClick={onCloseClick} type={'default'} size={'mega'} />
           </div>
         </div>
         <span className={css.message}>{message}</span>
@@ -29,3 +38,4 @@ const Notification: FC<INotificationProps> = (props) => {
 };
 
 export { Notification };
+export type { INotificationProps };

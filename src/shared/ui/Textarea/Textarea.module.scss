@@ -1,0 +1,35 @@
+@import 'src/shared/styles/colors';
+@import 'src/shared/styles/variables';
+
+.textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $ui-step;
+}
+.helper {
+  display: flex;
+  justify-content: space-between;
+  font-size: $ui-fontsize-small;
+  color: $ui-color-gray-700;
+}
+.field {
+  resize: none;
+  @include Shadow6;
+  border-radius: $ui-radius;
+  padding: $ui-step calc($ui-step * 2.5);
+
+  &::placeholder {
+    color: $ui-color-gray-600;
+  }
+
+  &:focus {
+    @include focus-primary;
+  }
+
+  &.vertical-resize {
+    resize: vertical;
+  }
+  &.horizontal-resize {
+    resize: horizontal;
+  }
+}

@@ -1,0 +1,24 @@
+@import 'src/shared/styles/colors';
+
+.label {
+  font-weight: 500;
+
+  &.customs_clearance {
+    color: $ui-color-warning-main;
+  }
+  &.customs_inspection {
+    color: $ui-color-danger-main;
+  }
+  &.customs_registration {
+    color: $ui-color-info-main;
+  }
+  &.loading {
+    color: $ui-color-primary-main;
+  }
+  &.unloading {
+    color: $ui-color-primary-main;
+  }
+  &.waypoint {
+    color: $ui-color-success-main;
+  }
+}

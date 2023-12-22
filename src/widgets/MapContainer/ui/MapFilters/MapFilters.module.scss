@@ -1,0 +1,25 @@
+@import '../../../../shared/styles/colors';
+@import '../../../../shared/styles/variables';
+
+.filters {
+  position: absolute;
+  right: calc($ui-step * 2.5);
+  top: calc($ui-step * 17);
+  box-shadow: $ui-shadow-2;
+  z-index: 401;
+  background-color: $ui-base-color-white;
+  padding: calc($ui-step * 2);
+  border-radius: $ui-step;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  width: calc($ui-step * 12);
+
+  &.show {
+    width: calc($ui-step * 52);
+    min-height: calc($ui-step * 5);
+    height: fit-content;
+  }
+  &.show.scroll {
+    max-height: calc($ui-step * 140);
+    overflow-y: scroll;
+  }
+}

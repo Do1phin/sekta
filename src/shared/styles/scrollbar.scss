@@ -1,0 +1,23 @@
+@import 'src/shared/styles/colors';
+@import 'src/shared/styles/variables';
+
+::-webkit-scrollbar {
+  width: calc($ui-step * 1.5);
+}
+
+::-webkit-scrollbar-track {
+  background-color: $ui-color-gray-100;
+}
+::-webkit-scrollbar-thumb {
+  background: $ui-color-gray-700;
+  border-radius: calc($ui-step);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $ui-color-gray-900;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $ui-color-gray-700 $ui-color-gray-100;
+}

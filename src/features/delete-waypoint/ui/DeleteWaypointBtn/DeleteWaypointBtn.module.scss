@@ -1,0 +1,6 @@
+@import 'src/shared/styles/variables';
+
+.button button {
+  height: calc($ui-step * 12.5);
+  width: calc($ui-step * 12.5);
+}

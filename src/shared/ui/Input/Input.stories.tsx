@@ -23,6 +23,12 @@ const meta: Meta<typeof Input> = {
     placeholder: 'Placeholder',
   },
   component: Input,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/BlWGslXMm6orA9moN7cwlb/Sekta-UI-Kit-(Copy)?type=design&node-id=1060-1874&mode=design&t=xE44ChNIGeMwD1rz-4',
+    },
+  },
   title: 'UI-Kit/Input',
 };
 export default meta;

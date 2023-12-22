@@ -2,9 +2,17 @@ import cx from 'classnames';
 import React, { FC } from 'react';
 
 import css from './Tag.module.scss';
-import { ITagProps } from './Tag.types';
 import icons from '../../icons/icons.svg';
+import { ExtendStyleTypes, IconPositionTypes, SizeTypes } from '../../types/componentTypes';
 
+interface ITagProps {
+  disabled?: boolean;
+  icon?: string;
+  iconPosition?: IconPositionTypes;
+  size?: SizeTypes;
+  style?: ExtendStyleTypes;
+  text: string;
+}
 const Tag: FC<ITagProps> = (props) => {
   const {
     disabled = 'false',

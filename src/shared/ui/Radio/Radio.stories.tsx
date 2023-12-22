@@ -1,8 +1,8 @@
+import type { IRadioProps } from './Radio';
 import { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
 
 import { Radio } from './Radio';
-import { IRadioProps } from './Radio.types';
 
 const meta: Meta<typeof Radio> = {
   args: {

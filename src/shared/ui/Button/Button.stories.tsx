@@ -14,6 +14,12 @@ const meta: Meta<typeof Button> = {
     },
   },
   component: Button,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/BlWGslXMm6orA9moN7cwlb/Sekta-UI-Kit-(Copy)?type=design&node-id=1006-439&mode=design&t=xE44ChNIGeMwD1rz-4',
+    },
+  },
   title: 'UI-Kit/Button',
 };
 export default meta;

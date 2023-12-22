@@ -1,0 +1,133 @@
+@import 'src/shared/styles/variables';
+
+.waypoint {
+  display: flex;
+  flex-direction: column;
+  height: calc($ui-step * 25);
+  gap: calc($ui-step * 2);
+  padding: calc($ui-step * 2) calc($ui-step * 2) calc($ui-step * 2) calc($ui-step * 16);
+  border-radius: calc($ui-step * 2);
+  position: relative;
+  background-color: $ui-color-primary-bg;
+
+  &:not(:last-child)::after {
+    position: absolute;
+    content: '';
+    background: url('../../../../../src/shared/images/dash-vertical-line.png') repeat-y;
+    left: calc($ui-step * 6);
+    top: calc($ui-step * 22);
+    height: calc($ui-step * 22);
+    width: 2px;
+    z-index: $ui-index-1;
+  }
+
+  &::before {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    padding: calc($ui-step * 2.5);
+    content: '';
+    height: calc($ui-step * 12.5);
+    position: absolute;
+    left: 0;
+    transition: 1s;
+    top: calc($ui-step * 8.5);
+    width: calc($ui-step * 12.5);
+    z-index: 1;
+
+    background: url('./../../../../../src/shared/icons/question-gray.svg') no-repeat center center
+    $ui-color-gray-300;
+  }
+
+  &.last {
+    &::after {
+      height: 0;
+    }
+  }
+  &.type-loading {
+    &::before {
+      background: url('./../../../../../src/shared/icons/truck-primary.svg') no-repeat center center
+        $ui-color-primary-secondary;
+    }
+  }
+  &.type-unloading {
+    &::before {
+      background: url('./../../../../../src/shared/icons/truck-primary.svg') no-repeat center center
+        $ui-color-primary-secondary;
+    }
+  }
+  &.type-waypoint {
+    &::before {
+      background: url('./../../../../../src/shared/icons/waypoint-success.svg') no-repeat center
+        center $ui-color-success-secondary;
+    }
+  }
+  &.type-clearance {
+    &::before {
+      background: url('./../../../../../src/shared/icons/mini_customs_clearance.svg') no-repeat center center
+        $ui-color-warning-secondary;
+    }
+  }
+  &.type-inspection {
+    &::before {
+      background: url('./../../../../../src/shared/icons/mini_customs_inspection.svg') no-repeat center center
+      $ui-color-danger-secondary;
+    }
+  }
+  &.type-registration {
+    &::before {
+      background: url('./../../../../../src/shared/icons/mini_customs_registration.svg') no-repeat center center
+        $ui-color-info-secondary;
+    }
+  }
+
+  &.draggable:hover::before {
+    cursor: grab;
+    //transform: rotateY(180deg);
+    //transform-style: preserve-3d;
+    height: 100px;
+    transition: 1s;
+    top: 0;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  &.detached {
+    border: 2px dashed $ui-color-primary;
+    border-radius: $ui-step;
+    background-color: white;
+  }
+
+  .content {
+    display: flex;
+    gap: calc($ui-step * 2);
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+  }
+}
+.content {
+  display: flex;
+  vertical-align: center;
+}
+.waypoint-info {
+  padding: 0 calc($ui-step * 3) 0 calc($ui-step * 16);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  & > button {
+    visibility: hidden;
+  }
+
+  &:hover {
+    & > button {
+      visibility: visible;
+    }
+  }
+}
+.distance {
+  color: $ui-color-gray-700;
+  user-select: none;
+  display: flex;
+  margin-right: auto;
+}

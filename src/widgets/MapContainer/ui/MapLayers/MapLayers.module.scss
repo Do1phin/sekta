@@ -1,0 +1,39 @@
+@import '../../../../shared/styles/variables';
+@import '../../../../shared/styles/colors';
+
+.layers-control {
+  position: absolute;
+  right: calc($ui-step * 2.5);
+  top: calc($ui-step * 2.5);
+  box-shadow: $ui-shadow-2;
+  z-index: 401;
+  background-color: $ui-base-color-white;
+  padding: calc($ui-step * 2);
+  border-radius: $ui-step;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  width: calc($ui-step * 12);
+
+  &:focus {
+    @include focus-primary;
+  }
+
+  &.show {
+    width: calc($ui-step * 52);
+    min-height: calc($ui-step * 5);
+    height: fit-content;
+  }
+  &.show.scroll {
+    max-height: calc($ui-step * 140);
+    overflow-y: scroll;
+  }
+  .content {
+    border-bottom: 1px solid $ui-color-gray-400;
+
+    & > * {
+      display: block;
+    }
+  }
+  .preview {
+    margin-top: calc($ui-step * 2);
+  }
+}
